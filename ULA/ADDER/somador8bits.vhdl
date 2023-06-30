@@ -22,7 +22,7 @@ architecture somagem of somador8bits is
             );
     end component; 
 
-    signal carry : std_logic_vector (6 downto 0);
+    signal carry : std_logic_vector (7 downto 0);
 
     begin
 
