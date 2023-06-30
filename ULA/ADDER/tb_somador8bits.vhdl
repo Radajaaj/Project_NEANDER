@@ -26,8 +26,18 @@ begin
     u_tb : process
     begin
 --0x000 0xFFF
-        s_A   <= x"000";
-        s_B <= x"FFF";
+        s_A   <= "01000000";
+        s_B <= "01000000";
+        s_Carry  <= '0';
+        wait for 20 ns; 
+
+        s_A   <= "01001000";
+        s_B <= "01000000";
+        s_Carry  <= '0';
+        wait for 20 ns; 
+
+        s_A   <= "01000000";
+        s_B <= "01000010";
         s_Carry  <= '0';
         wait for 20 ns; 
 

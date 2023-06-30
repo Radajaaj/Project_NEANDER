@@ -57,10 +57,5 @@ architecture somagem of somador8bits is
         u_soma7 : somador port map (
             Asum(7), Bsum(7), carry(6), Sumado(7), carry(7)
         );
-  
-
-
-
-
     end architecture;
 
