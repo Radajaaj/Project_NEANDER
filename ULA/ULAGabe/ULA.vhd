@@ -39,17 +39,17 @@ architecture arch of ULA is
     );
   end component;
 
-  signal sinal_not, sinal_add, sinal_and, sinal_or, sinal_outula : std_logic_vector(7 downto 0);
+  signal sinal_not, sinal_add, sinal_and, sinal_or, sinal_out_ula : std_logic_vector(7 downto 0);
   
 begin
 
   sinal_and <= X and Y;
   sinal_not <= not(X); 
   sinal_or <= X or Y;
-Saida_ULA <= sinal_outula;
+  Saida_ULA <= sinal_out_ula;
   
   U_soma : somador8bit port map (X, Y, '0', sinal_add);
-  U_ULA : mux5x8 port map (sinal_not, sinal_and, sinal_or, sinal_add, Y, ULA_op, Saida_ULA);
-  U_detc : Detector_NZ port map (sinal_outula, NZ);
+  U_ULA : mux5x8 port map (sinal_not, sinal_and, sinal_or, sinal_add, Y, ULA_op, sinal_out_ula);
+  U_detc : Detector_NZ port map (sinal_out_ula, NZ);
   
 end architecture ;

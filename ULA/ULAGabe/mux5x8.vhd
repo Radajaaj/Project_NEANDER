@@ -16,10 +16,10 @@ end mux5x8;
 architecture hard of mux5x8 is 
 begin
     
-   H <= A when sel ="100";
-   H <= B when sel ="011";
-   H <= C when sel ="010";
-   H <= D when sel ="001";
-   H <= E when sel ="000";
+   H <= A when sel ="100" else
+        B when sel ="011" else
+        C when sel ="010"else
+        D when sel ="001"else
+        E when sel ="000";
 
 end hard;
