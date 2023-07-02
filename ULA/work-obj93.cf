@@ -1,4 +1,0 @@
-v 3
-file . "ULA_tudo.vhd" "20230702000726.000" "20230701210734.079":
-  entity ula_tudo at 1( 0) + 0 on 11;
-  architecture ulagem of ula_tudo at 16( 364) + 0 on 12;

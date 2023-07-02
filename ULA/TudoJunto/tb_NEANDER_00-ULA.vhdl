@@ -40,7 +40,7 @@ architecture quickmath of tb_moduloULA is
             mem_rw : in std_logic;
             AC_rw  : in std_logic;
             ULA_op : in std_logic_vector(2 downto 0);
-            preset : in std_logic;
+            reset : in std_logic;
             clk    : in std_logic;
             interface_flags : out std_logic_vector(1 downto 0)
         );

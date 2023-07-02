@@ -7,7 +7,7 @@ entity ULA_tudo is
     mem_rw : in std_logic;
     AC_rw  : in std_logic;
     ULA_op : in std_logic_vector(2 downto 0);
-    preset : in std_logic;
+    reset : in std_logic;
     clk    : in std_logic;
     interface_flags : out std_logic_vector(1 downto 0)
   );
@@ -56,7 +56,7 @@ begin
   interface_barramento <= s_ac2ula when mem_rw='1' else (others => 'Z');
   
   u_ULA   : ULA      port map(s_ac2ula, interface_barramento, ULA_op, s_ula2ac, s_ac2flags);
-  u_AC    : reg8bits port map(s_ula2ac, clk, '1', preset, AC_rw, s_ac2ula);
-  u_FLAGS : reg2bits port map(s_ac2flags, clk, '1', preset, AC_rw, interface_flags);
+  u_AC    : reg8bits port map(s_ula2ac, clk, '1', reset, AC_rw, s_ac2ula);
+  u_FLAGS : reg2bits port map(s_ac2flags, clk, '1', reset, AC_rw, interface_flags);
 
 end architecture;

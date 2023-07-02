@@ -1,4 +1,19 @@
 v 3
-file . "tb_NEANDER_00-ULA.vhdl" "20230702003322.000" "20230701213325.010":
-  entity tb_moduloula at 24( 1103) + 0 on 11;
-  architecture quickmath of tb_moduloula at 30( 1196) + 0 on 12;
+file . "tb_ULA.vhdl" "20230630174618.000" "20230701224541.287":
+  entity tb_ula at 1( 0) + 0 on 49;
+  architecture hard of tb_ula at 7( 75) + 0 on 50;
+file . "tb_regCarga8bits.vhdl" "20230628123150.000" "20230701224541.286":
+  entity tb_regcarga8bits at 1( 0) + 0 on 47;
+  architecture rg of tb_regcarga8bits at 8( 116) + 0 on 48;
+file . "tb_regCarga2bits.vhdl" "20230628123150.000" "20230701224541.286":
+  entity tb_regcarga2bits at 1( 0) + 0 on 45;
+  architecture reg of tb_regcarga2bits at 8( 116) + 0 on 46;
+file . "tb_regCarga1bit.vhdl" "20230628123150.000" "20230701224541.284":
+  entity tb_regcarga1bit at 1( 0) + 0 on 43;
+  architecture test_rg of tb_regcarga1bit at 8( 121) + 0 on 44;
+file . "tb_detector.vhdl" "20230628123150.000" "20230701224541.281":
+  entity tb_detector at 1( 0) + 0 on 39;
+  architecture arch of tb_detector at 7( 88) + 0 on 40;
+file . "tb_NEANDER_00-ULA.vhdl" "20230702012258.000" "20230701224541.283":
+  entity tb_moduloula at 24( 1103) + 0 on 41;
+  architecture quickmath of tb_moduloula at 31( 1197) + 0 on 42;
