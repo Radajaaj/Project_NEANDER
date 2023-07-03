@@ -34,7 +34,7 @@ architecture quickmath of tb_moduloULA is
     -- ATENCAO: trocar para o SEU modulo ULA <==================================================
     -- pois os nomes e ordens das interfaces podem ser diferentes
     -- porém, a quantidade DEVE ser a mesma, senao, algo está errado
-    component ULA_tudo is 
+    component ULA_tud is 
         port(
             interface_barramento : inout std_logic_vector(7 downto 0);
             mem_rw : in std_logic;
@@ -44,7 +44,7 @@ architecture quickmath of tb_moduloULA is
             clk    : in std_logic;
             interface_flags : out std_logic_vector(1 downto 0)
         );
-        end component ULA_tudo;
+        end component ULA_tud;
 
     -- Nao é necessário alterar os sinais
     signal srst : std_logic := '0';
@@ -56,7 +56,7 @@ architecture quickmath of tb_moduloULA is
 
 begin
     -- ATENCAO: ordenar para o SEU modulo ULA <=================================================
-    superula : ULA_tudo port map(
+    superula : ULA_tud port map(
         sbarramento,
         sMEM_nrw,
         sAC_nrw,
