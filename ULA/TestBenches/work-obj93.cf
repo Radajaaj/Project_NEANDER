@@ -1,19 +1,19 @@
-v 3
-file . "tb_ULA.vhdl" "20230630174618.000" "20230701224541.287":
-  entity tb_ula at 1( 0) + 0 on 49;
-  architecture hard of tb_ula at 7( 75) + 0 on 50;
-file . "tb_regCarga8bits.vhdl" "20230628123150.000" "20230701224541.286":
-  entity tb_regcarga8bits at 1( 0) + 0 on 47;
-  architecture rg of tb_regcarga8bits at 8( 116) + 0 on 48;
-file . "tb_regCarga2bits.vhdl" "20230628123150.000" "20230701224541.286":
-  entity tb_regcarga2bits at 1( 0) + 0 on 45;
-  architecture reg of tb_regcarga2bits at 8( 116) + 0 on 46;
-file . "tb_regCarga1bit.vhdl" "20230628123150.000" "20230701224541.284":
-  entity tb_regcarga1bit at 1( 0) + 0 on 43;
-  architecture test_rg of tb_regcarga1bit at 8( 121) + 0 on 44;
-file . "tb_detector.vhdl" "20230628123150.000" "20230701224541.281":
-  entity tb_detector at 1( 0) + 0 on 39;
-  architecture arch of tb_detector at 7( 88) + 0 on 40;
-file . "tb_NEANDER_00-ULA.vhdl" "20230702012258.000" "20230701224541.283":
-  entity tb_moduloula at 24( 1103) + 0 on 41;
-  architecture quickmath of tb_moduloula at 31( 1197) + 0 on 42;
+v 4
+file . "tb_ULA.vhdl" "c3289ec3120f42891bf9a4e0f9e33df87b9232ef" "20230703112245.356":
+  entity tb_ula at 1( 0) + 0 on 21;
+  architecture hard of tb_ula at 7( 75) + 0 on 22;
+file . "tb_regCarga8bits.vhdl" "e5503ba8c409fd92ffb90e2f430e65ea857b7d6f" "20230703112245.356":
+  entity tb_regcarga8bits at 1( 0) + 0 on 19;
+  architecture rg of tb_regcarga8bits at 8( 116) + 0 on 20;
+file . "tb_regCarga2bits.vhdl" "8d49d3b1a900b073dcde6be0986097e2cc119e5f" "20230703112245.356":
+  entity tb_regcarga2bits at 1( 0) + 0 on 17;
+  architecture reg of tb_regcarga2bits at 8( 116) + 0 on 18;
+file . "tb_regCarga1bit.vhdl" "307d10bc11fdb8644fcc0b81741c409468850070" "20230703112245.355":
+  entity tb_regcarga1bit at 1( 0) + 0 on 15;
+  architecture test_rg of tb_regcarga1bit at 8( 121) + 0 on 16;
+file . "tb_NEANDER_00-ULA.vhdl" "eb4c321bdc2d5c71bdf080bb2e838ddf7c39d183" "20230703112245.354":
+  entity tb_moduloula at 24( 1103) + 0 on 13;
+  architecture quickmath of tb_moduloula at 31( 1197) + 0 on 14;
+file . "tb_detector.vhdl" "65ab5c4fe762fa2d635f871174b2f79a3571fa2c" "20230703112245.352":
+  entity tb_detector at 1( 0) + 0 on 11;
+  architecture arch of tb_detector at 7( 88) + 0 on 12;

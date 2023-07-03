@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity ULA_tudo is 
+entity ULA_tud is 
   port(
     interface_barramento : inout std_logic_vector(7 downto 0);
     mem_rw : in std_logic;
@@ -11,9 +11,9 @@ entity ULA_tudo is
     clk    : in std_logic;
     interface_flags : out std_logic_vector(1 downto 0)
   );
-end ULA_tudo;
+end ULA_tud;
 
-architecture ULAGEM of ULA_tudo is
+architecture ULAGEM of ULA_tud is
 
 ----Registrador de 8 bits, vulgo AC------
     component reg8bits is
