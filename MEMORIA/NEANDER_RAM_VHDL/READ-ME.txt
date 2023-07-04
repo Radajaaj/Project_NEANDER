@@ -1,0 +1,40 @@
+
+MEMÓRIA ASSÍNCRONA PARA NEANDER
+- Emulação de comportamento da memória do DigitalWorks para GHDL
+	- 256x8bits
+
+INSTRUÇÕES:
+- Arquivos:
+	- as_ram.vhdl	 -> memória assíncrona
+	- tb_as_ram.vhdl -> testbench opcional/didático
+	- neanderram.mem -> arquivo binário de memória salvo pelo aplicativo windows "wneander.exe"
+
+- Sinais: 
+	- addr	-> endereço de 8bits para leitura/escrita
+	- data	-> dado de 8bits lido/escrito
+	- notrw	-> leitura = 1, escrita = 0
+	- reset	-> ativo = 0, inativo = 1
+
+- Funcionamento:
+	- Durante simulação -> reset deve pulsar 1 -> 0 para carregar conteúdo de neanderram.mem na ram
+	- reset deve estar em '0' para ativar ram para leitura/escrita
+	- Se nada está "acontecendo", então ram deve estar em modo de leitura
+		- ié, notrw por padrão é '0'
+	- Escrita:
+		- addr deve conter endereço de escrita
+		- data deve conter byte a ser escrito
+		- notrw deve pulsar 0 -> 1 -> 0
+	- Leitura:
+		- addr deve conter endereço de escrita
+		- data deve conter alta-impendância (Z)
+		- notrw, por padrão, já deve estar em '0'
+
+AUXÍLIO:
+	- O arquivo tb_as_ram.vhdl é o testbench da as_ram.vhdl
+		- Contém carga de neanderram.mem
+		- Leitura de todas as posições da memória
+		- Escrita de dado (0x0F) em endereço (254d)
+		- Leitura de todas as posições da memória
+	- O arquivo tb_as_ram.gtkw (gtkwave) contém o resultado da simulação do tb_as_ram.vhdl
+	- O arquivo ram_comp.sh analisa, elabora e simula a memória ram.
+
