@@ -1,0 +1,19 @@
+v 4
+file . "Reg_REM.vhdl" "b95b740a5d502291d4d0a6d5a05f2c2caf4d7ecf" "20230705121905.301":
+  entity reg_rem at 1( 0) + 0 on 21;
+  architecture arch of reg_rem at 14( 267) + 0 on 22;
+file . "Reg_RDM.vhdl" "c5ff00e09f6b0a179c91a17b321c0f6146e9f7d2" "20230705121905.297":
+  entity reg_rdm at 1( 0) + 0 on 19;
+  architecture arch of reg_rdm at 14( 266) + 0 on 20;
+file . "regCarga1bit.vhdl" "2f746e698aaa142ef1764068efc6adfba82638df" "20230705121905.295":
+  entity regcarga1bit at 1( 0) + 0 on 17;
+  architecture reg1 of regcarga1bit at 14( 254) + 0 on 18;
+file . "mux2x8.vhdl" "df46022d2b1625887bed1dae84b693c7eab5ddb3" "20230705121905.292":
+  entity mux2x8 at 1( 0) + 0 on 15;
+  architecture hard of mux2x8 at 13( 252) + 0 on 16;
+file . "ModuloMemory.vhdl" "92032f6179b891a93b008602c2fa0733ba4ecf3c" "20230705121905.290":
+  entity modulo_mem at 1( 0) + 0 on 13;
+  architecture memoriando of modulo_mem at 18( 437) + 0 on 14;
+file . "FFJK_DP.vhdl" "5ee364c37100e51b79da9c12f31d741621b61c19" "20230705121905.284":
+  entity ffjkd at 1( 0) + 0 on 11;
+  architecture hardware of ffjkd at 13( 247) + 0 on 12;
