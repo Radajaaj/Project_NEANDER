@@ -1,6 +1,6 @@
 library ieee ;
     use ieee.std_logic_1164.all ;
-
+ 
 entity Reg_RDM is
   port (
     rdm : in std_logic_vector(7 downto 0);
@@ -9,7 +9,7 @@ entity Reg_RDM is
     nrw : in std_logic;
     s : out std_logic_vector(7 downto 0)
   ) ;
-end entity ; 
+end entity; 
 
 architecture arch of Reg_RDM is
 

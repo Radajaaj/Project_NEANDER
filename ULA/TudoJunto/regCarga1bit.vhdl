@@ -31,7 +31,7 @@ architecture reg1 of regCarga1bit is
     end component;
 
     signal datain, dataout : std_logic; 
-    
+     
 begin
     s <= dataout;
     u_mux : mux2x1 port map(dataout, d, nrw, datain);
