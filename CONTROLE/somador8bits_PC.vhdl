@@ -11,7 +11,7 @@ entity somador8bits_PC is
     );
 end entity;
  
-architecture somagens of somador8bit is
+architecture somagens of somador8bits_PC is
     component somado is
         port(
             a    : in std_logic;

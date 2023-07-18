@@ -1,0 +1,34 @@
+v 4
+file . "Contador-3-Bits.vhdl" "76ae668820a645f57cefd8a7deb491c95f35139b" "20230718180548.055":
+  entity contador3bits at 1( 0) + 0 on 33;
+  architecture contagem of contador3bits at 13( 257) + 0 on 34;
+file . "ctrl.vhdl" "043aca65ce74fc218c948bfb962dae8506a786c9" "20230718180548.056":
+  entity ctrl at 1( 0) + 0 on 35;
+  architecture control of ctrl at 12( 229) + 0 on 36;
+file . "Decode.vhdl" "f6fdb4ae894e6023674e41aa9902dfb5ed02fd95" "20230718180548.057":
+  entity decodificador at 1( 0) + 0 on 37;
+  architecture jorge of decodificador at 11( 206) + 0 on 38;
+file . "FFJK.vhdl" "bf52b678592f1e292e6a00da7c01bed7dc04fb76" "20230718180548.059":
+  entity fjk at 1( 0) + 0 on 39;
+  architecture latc of fjk at 13( 246) + 0 on 40;
+file . "FFJK_DP.vhdl" "a2e7f5a3fcc6dc2265d8f54bc1bdf69b2a8d3877" "20230718180548.061":
+  entity ffjk_d at 1( 0) + 0 on 41;
+  architecture hard of ffjk_d at 13( 248) + 0 on 42;
+file . "mux2x1.vhdl" "cec6dad5f867f20792110d4b4ca59126bc095169" "20230718180548.062":
+  entity mux2x1 at 1( 0) + 0 on 43;
+  architecture hard of mux2x1 at 13( 188) + 0 on 44;
+file . "PCRIP.vhdl" "04ae4d55a9cfdd6bb28536159f4c39969f6b361b" "20230718180548.064":
+  entity pcrip at 1( 0) + 0 on 45;
+  architecture regis of pcrip at 14( 262) + 0 on 46;
+file . "regCarga1.vhdl" "17d42a8ee56e40dfc7d0eb60be83678448316ee7" "20230718180548.066":
+  entity regcarga1 at 1( 0) + 0 on 47;
+  architecture reg1 of regcarga1 at 14( 251) + 0 on 48;
+file . "RI.vhdl" "d5af2c5ffc5a4c4299d6e8adeeef5de5b1b7d300" "20230718180548.067":
+  entity rim at 1( 0) + 0 on 49;
+  architecture arch of rim at 14( 261) + 0 on 50;
+file . "somador8bits_PC.vhdl" "f9ee2f307f585dc6d5fa10333ca873ec99b1f8cd" "20230718180548.069":
+  entity somador8bits_pc at 1( 0) + 0 on 51;
+  architecture somagens of somador8bits_pc at 14( 321) + 0 on 52;
+file . "tb_Contador3BITS.vhdl" "786cbcf7f2f4c4436adf88dc0e71afcb771160a9" "20230718180548.070":
+  entity tb_contador at 1( 0) + 0 on 53;
+  architecture conza of tb_contador at 7( 86) + 0 on 54;

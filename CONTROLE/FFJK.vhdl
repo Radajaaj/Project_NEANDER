@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all; -- std_logic para detectar erros
-
+ 
 entity FJK is
     port(
         j, k   : in std_logic;
