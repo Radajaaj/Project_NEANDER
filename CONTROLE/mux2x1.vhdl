@@ -13,7 +13,7 @@ end entity;
 architecture hard  of mux2x1 is 
 begin
     
-        H <= A when sel = '0' else B;
+    H <= A when sel = '0' else B;
     
     
 end hard ;
