@@ -11,7 +11,7 @@ end decodificador;
 architecture jorge of decodificador is 
 begin
     
-   instrout <=  "10000000000" when instrin = "00000000" else -- snop (nenhuma operacao)             --
+   instrout <=  "10000000000" when instrin = "00000000" else --                         snop (nenhuma operacao)
                 "01000000000" when instrin = "00010000" else -- MEM(end) <- AC          ssta (armazena acumulador)
                 "00100000000" when instrin = "00100000" else -- AC <- MEM(end)          slda (carrega acumulador)
                 "00010000000" when instrin = "00110000" else -- AC <- MEM(end) + AC     sadd (soma)
@@ -21,5 +21,5 @@ begin
                 "00000001000" when instrin = "10000000" else -- PC <- end               sjmp (desvio incondicional - jump)
                 "00000000100" when instrin = "10010000" else -- if(N=1) then PC <- end  sjn  (desvio condicional - jump on negative)
                 "00000000010" when instrin = "10100000" else -- if(Z=1) then PC <- end  sjz  (desvio condicional - jump on zero)
-                "00000000001" when instrin = "11110000";     -- shlt (termino de execucao - halt)
+                "00000000001" when instrin = "11110000";     --                         shlt (termino de execucao - halt)
 end jorge;
