@@ -1,55 +1,62 @@
-library ieee ;
-use ieee.std_logic_1164.all ;
-entity ULA is
-  port (
-    X : in std_logic_vector(7 downto 0);
-    Y : in std_logic_vector(7 downto 0);
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ULA_tud is 
+  port(
+    interface_barramento : inout std_logic_vector(7 downto 0);
+    mem_rw : in std_logic;
+    AC_rw  : in std_logic;
     ULA_op : in std_logic_vector(2 downto 0);
-    Saida_ULA : out std_logic_vector(7 downto 0);
-    NZ : out std_logic_vector(1 downto 0)
+    reset : in std_logic;
+    clk    : in std_logic;
+    interface_flags : out std_logic_vector(1 downto 0)
   );
-end entity ; 
+end ULA_tud;
 
-architecture arch of ULA is
-  component mux5x8 is port(
-      A   : in std_logic_vector (7 downto 0); --NOT
-      B   : in std_logic_vector (7 downto 0);--AND
-      C   : in std_logic_vector (7 downto 0);--OR
-      D   : in std_logic_vector (7 downto 0);--ADD
-      E   : in std_logic_vector (7 downto 0);--LDA
-      sel : in std_logic_vector (2 downto 0);--ULA_op
-      H   : out std_logic_vector(7 downto 0)--s_resultado
-  );
-  end component;
+architecture ULAGEM of ULA_tud is
 
-  component Detector_NZ is
-    port (
-      datain : in std_logic_vector(7 downto 0);
-      FNZ : out std_logic_vector(1 downto 0)--N e Z
-    ); 
-  end component;
+----Registrador de 8 bits, vulgo AC------
+    component reg8bits is
+        port (
+          d : in std_logic_vector(7 downto 0);
+          Clock : in std_logic;
+          Preset, Clear : in std_logic;
+          nrw : in std_logic;
+          s : out std_logic_vector(7 downto 0)
+        ) ;
+      end component; 
 
-  component somador8bit is
-    port(
-        Asum   : in  std_logic_vector (7 downto 0);
-        Bsum   : in  std_logic_vector (7 downto 0);
-        Cin    : in  std_logic;
-        Sumado : out std_logic_vector (7 downto 0);
-        Cout   : out std_logic
-    );
-  end component;
+----Registrador de 2 bits, vulgo FLAGS------
+      component reg2bits is
+        port (
+          d : in std_logic_vector(1 downto 0);
+          Clock : in std_logic;
+          Preset, Clear : in std_logic;
+          nrw : in std_logic;
+          s : out std_logic_vector(1 downto 0)
+        ) ;
+      end component; 
 
-  signal sinal_not, sinal_add, sinal_and, sinal_or, sinal_out_ula : std_logic_vector(7 downto 0);
-  
+----ULA, vulgo ULinha------
+    component ULA is
+        port (
+        X : in std_logic_vector(7 downto 0);
+        Y : in std_logic_vector(7 downto 0);
+        ULA_op : in std_logic_vector(2 downto 0);
+        Saida_ULA : out std_logic_vector(7 downto 0);
+        NZ : out std_logic_vector(1 downto 0)
+        );
+    end component; 
+   
+  signal s_ac2ula, s_ula2ac : std_logic_vector(7 downto 0);
+  signal s_ac2flags : std_logic_vector(1 downto 0);
+
 begin
 
-  sinal_and <= X and Y;
-  sinal_not <= not(X); 
-  sinal_or <= X or Y;
-  Saida_ULA <= sinal_out_ula;
+  interface_barramento <= s_ac2ula when mem_rw='1' else (others => 'Z');
   
-  U_soma : somador8bit port map (X, Y, '0', sinal_add);
-  U_ULA : mux5x8 port map (sinal_not, sinal_and, sinal_or, sinal_add, Y, ULA_op, sinal_out_ula);
-  U_detc : Detector_NZ port map (sinal_out_ula, NZ);
-  
-end architecture ;
+  u_ULA   : ULA      port map(s_ac2ula, interface_barramento, ULA_op, s_ula2ac, s_ac2flags);
+  u_AC    : reg8bits port map(s_ula2ac, clk, '1', reset, AC_rw, s_ac2ula);
+  u_FLAGS : reg2bits port map(s_ac2flags, clk, '1', reset, AC_rw, interface_flags);
+
+end architecture;
