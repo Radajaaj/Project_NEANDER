@@ -37,7 +37,7 @@ signal s_sadd, s_mux2pc, s_PCatual, s_endPC2MEM_elo : std_logic_vector (7 downto
 begin
 
     s_mux2pc <= barr when nbarrinc = '0' else s_sadd;
-    s_endPC2MEM_elo <= s_endPC2MEM;
+    s_endPC2MEM_elo <= s_endPC2MEM; --talvez tenha que fazer s_endPC2MEM <= s_endPC2MEM_elo;
     s_PCatual <= s_endPC2MEM_elo;
 
     U_soma : somador8bits_PC port map ("00000000", s_PCatual, '1', s_sadd);
