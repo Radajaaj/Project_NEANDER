@@ -6,11 +6,11 @@ entity UC is
     FlagsNZ         : in std_logic_vector(1 downto 0);
     clk             : in std_logic;
     cl              : in std_logic;
-    barrControle    : out std_logic_vector(10 downto 0);
+    barrControle    : out std_logic_vector(10 downto 0)
   );
 end entity ; 
 
-architecture arch of ULA is
+architecture archUC of UC is
 
     component contador3bits is
         port(
@@ -79,7 +79,7 @@ begin
 
   sinal_DECODENZ(12 downto 11)  <= FlagsNZ;
   sinal_DECODENZ(10 downto 0)   <= EnterDecode;
-  sai                           <= sinal_cont;
+  Sai                           <= sinal_cont;
   
   U_CONT    : contador3bits port map (clk, cl, '1');
   U_HLT     : Mod_UC_HLT    port map (sinal_cont);
@@ -90,19 +90,18 @@ begin
   U_NOT     : Mod_UC_NOT    port map (sinal_cont);
   U_STA     : Mod_UC_STA    port map (sinal_cont);
   
-  barrControle <= saidaHLT      when sinal_DECODENZ = "0000000000001"
-  barrControle <= saidaJMP      when sinal_DECODENZ = "0000000001000"
-  barrControle <= saidaJMP      when sinal_DECODENZ = "1000000000100"
-  barrControle <= saidaJMP      when sinal_DECODENZ = "0100000000010"  
-  barrControle <= saidaJMPNZ    when sinal_DECODENZ = "0000000000100"
-  barrControle <= saidaJMPNZ    when sinal_DECODENZ = "0000000000010"
-  barrControle <= saidaNOP      when sinal_DECODENZ = "0010000000000"
-  barrControle <= saidaNOT      when sinal_DECODENZ = "0000000010000"
-  barrControle <= saidaSTA      when sinal_DECODENZ = "0001000000000"
-  barrControle <= saidaLDA      when sinal_DECODENZ = "0000100000000"
-  barrControle <= saidaLDA      when sinal_DECODENZ = "0000010000000"
-  barrControle <= saidaLDA      when sinal_DECODENZ = "0000001000000"
-  barrControle <= saidaLDA      when sinal_DECODENZ = "0000000100000"
+  barrControle <= saidaHLT      when sinal_DECODENZ = "0000000000001";
+  barrControle <= saidaJMP      when sinal_DECODENZ = "0000000001000";
+  barrControle <= saidaJMP      when sinal_DECODENZ = "1000000000100";
+  barrControle <= saidaJMP      when sinal_DECODENZ = "0100000000010";
+  barrControle <= saidaJMPNZ    when sinal_DECODENZ = "0000000000100";
+  barrControle <= saidaJMPNZ    when sinal_DECODENZ = "0000000000010";
+  barrControle <= saidaNOP      when sinal_DECODENZ = "0010000000000";
+  barrControle <= saidaNOT      when sinal_DECODENZ = "0000000010000";
+  barrControle <= saidaSTA      when sinal_DECODENZ = "0001000000000";
+  barrControle <= saidaLDA      when sinal_DECODENZ = "0000100000000";
+  barrControle <= saidaLDA      when sinal_DECODENZ = "0000010000000";
+  barrControle <= saidaLDA      when sinal_DECODENZ = "0000001000000";
+  barrControle <= saidaLDA      when sinal_DECODENZ = "0000000100000";
 
-  
-end architecture ;
+end architecture;
