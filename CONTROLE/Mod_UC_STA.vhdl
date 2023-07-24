@@ -17,15 +17,15 @@ begin
   b1            <= EnterSTA(1);
   b0            <= EnterSTA(0);
 
-  SaidaSta(10)  <= '1';                                                                                         --barr/inc
-  SaidaSta(9)   <= (not(b2 and not(b1) and b0));                                                                --barr/PC
-  SaidaSta(8)   <= '0';                                                                                         --ULA_op
-  SaidaSta(7)   <= '0';                                                                                         --ULA_op
-  SaidaSta(6)   <= '0';                                                                                         --ULA_op
-  SaidaSta(5)   <= ((not(b2) and not(b1) and b0) or (b2 and not(b1) and not(b0)));                              --PC_rw
-  SaidaSta(4)   <= '0';                                                                                         --AC_rw
-  SaidaSta(3)   <= (b2 and b1 and not(b0));                                                                     --MEM_rw
-  SaidaSta(2)   <= (not(b2) and not(b1) and not(b0)) or (not(b2) and b1 and b0) or (b2 and not(b1) and b0);     --REM_rw
-  SaidaSta(1)   <= (not(b2) and not(b1) and b0) or (b2 and not(b1) and not(b0));                                --RDM_rw
-  SaidaSta(0)   <= (not(b2) and b1 and not(b0));                                                                --RI_rw
+  SaidaSTA(10)  <= '1';                                                                                         --barr/inc
+  SaidaSTA(9)   <= (not(b2 and not(b1) and b0));                                                                --barr/PC
+  SaidaSTA(8)   <= '0';                                                                                         --ULA_op
+  SaidaSTA(7)   <= '0';                                                                                         --ULA_op
+  SaidaSTA(6)   <= '0';                                                                                         --ULA_op
+  SaidaSTA(5)   <= ((not(b2) and not(b1) and b0) or (b2 and not(b1) and not(b0)));                              --PC_rw
+  SaidaSTA(4)   <= '0';                                                                                         --AC_rw
+  SaidaSTA(3)   <= (b2 and b1 and not(b0));                                                                     --MEM_rw
+  SaidaSTA(2)   <= (not(b2) and not(b1) and not(b0)) or (not(b2) and b1 and b0) or (b2 and not(b1) and b0);     --REM_rw
+  SaidaSTA(1)   <= (not(b2) and not(b1) and b0) or (b2 and not(b1) and not(b0));                                --RDM_rw
+  SaidaSTA(0)   <= (not(b2) and b1 and not(b0));                                                                --RI_rw
 end architecture ;

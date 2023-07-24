@@ -17,15 +17,15 @@ begin
   b1            <= EnterJMPNZ(1);
   b0            <= EnterJMPNZ(0);
 
-  SaidaNop(10)  <= '1';                                   --barr/inc
-  SaidaNop(9)   <= '1';                                   --barr/PC
-  SaidaNop(8)   <= '0';                                   --ULA_op
-  SaidaNop(7)   <= '0';                                   --ULA_op
-  SaidaNop(6)   <= '0';                                   --ULA_op
-  SaidaNop(5)   <= (not(b2) and (b0));                    --PC_rw
-  SaidaNop(4)   <= '0';                                   --AC_rw
-  SaidaNop(3)   <= '0';                                   --MEM_rw
-  SaidaNop(2)   <= (not(b2 and b1 and b0));               --REM_rw
-  SaidaNop(1)   <= (not(b2) and not(b1) and b0);          --RDM_rw
-  SaidaNop(0)   <= (not(b2) and b1 and not(b0));          --RI_rw
+  SaidaJMPNZ(10)  <= '1';                                   --barr/inc
+  SaidaJMPNZ(9)   <= '1';                                   --barr/PC
+  SaidaJMPNZ(8)   <= '0';                                   --ULA_op
+  SaidaJMPNZ(7)   <= '0';                                   --ULA_op
+  SaidaJMPNZ(6)   <= '0';                                   --ULA_op
+  SaidaJMPNZ(5)   <= (not(b2) and (b0));                    --PC_rw
+  SaidaJMPNZ(4)   <= '0';                                   --AC_rw
+  SaidaJMPNZ(3)   <= '0';                                   --MEM_rw
+  SaidaJMPNZ(2)   <= (not(b2 and b1 and b0));               --REM_rw
+  SaidaJMPNZ(1)   <= (not(b2) and not(b1) and b0);          --RDM_rw
+  SaidaJMPNZ(0)   <= (not(b2) and b1 and not(b0));          --RI_rw
 end architecture ;

@@ -11,15 +11,15 @@ end entity;
 architecture archHLT of Mod_UC_HLT is
 
 begin
-  SaidaLda(10)  <= '0';--barr/inc
-  SaidaLda(9)   <= '0';--barr/PC
-  SaidaLda(8)   <= '0';--ULA_op
-  SaidaLda(7)   <= '0';--ULA_op
-  SaidaLda(6)   <= '0';--ULA_op
-  SaidaLda(5)   <= '0';--PC_rw
-  SaidaLda(4)   <= '0';--AC_rw
-  SaidaLda(3)   <= '0';--MEM_rw
-  SaidaLda(2)   <= '0';--REM_rw
-  SaidaLda(1)   <= '0';--RDM_rw
-  SaidaLda(0)   <= '0';--RI_rw
+  SaidaHLT(10)  <= '0';--barr/inc
+  SaidaHLT(9)   <= '0';--barr/PC
+  SaidaHLT(8)   <= '0';--ULA_op
+  SaidaHLT(7)   <= '0';--ULA_op
+  SaidaHLT(6)   <= '0';--ULA_op
+  SaidaHLT(5)   <= '0';--PC_rw
+  SaidaHLT(4)   <= '0';--AC_rw
+  SaidaHLT(3)   <= '0';--MEM_rw
+  SaidaHLT(2)   <= '0';--REM_rw
+  SaidaHLT(1)   <= '0';--RDM_rw
+  SaidaHLT(0)   <= '0';--RI_rw
 end architecture ;
