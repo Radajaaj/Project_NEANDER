@@ -17,7 +17,7 @@ architecture tbazems of tb_Controlao is
           OUT_PC : out std_logic_vector(7 downto 0);
           Barramento_Controle : out std_logic_vector(10 downto 0)
         );
-    end component;
+      end component;
 
       signal S_clear :std_logic;
       signal S_Barramento_PC, S_Barramento_RI, S_out_PC :std_logic_vector(7 downto 0) ;
