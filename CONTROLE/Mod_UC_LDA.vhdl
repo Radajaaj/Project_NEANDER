@@ -26,7 +26,7 @@ begin
   SaidaLDA(5)   <= (not(b2) and not(b1) and b0) or (b2 and not(b1) and not(b0));                              --PC_rw
   SaidaLDA(4)   <= (b2 and b1 and b0);                                                                        --AC_rw
   SaidaLDA(3)   <= '0';                                                                                       --MEM_rw
-  SaidaLDA(2)   <= (not(b2) and not(b1) not(b0)) or (not(b2) and b1 and b0) or (b2 and not(b1) and b0);       --REM_rw
+  SaidaLDA(2)   <= (not(b2) and not(b1) and not(b0)) or (not(b2) and b1 and b0) or (b2 and not(b1) and b0);       --REM_rw
   SaidaLDA(1)   <= (not(b2) and not(b1) and b0) or (b2 and not(b0));                                          --RDM_rw
   SaidaLDA(0)   <= (not(b2) and b1 and not(b0));                                                              --RI_rw
 end architecture ;
