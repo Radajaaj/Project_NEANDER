@@ -1,5 +1,6 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
 entity decodificador is port
 (
@@ -21,5 +22,6 @@ begin
                 "00000001000" when instrin = "10000000" else -- PC <- end               sjmp (desvio incondicional - jump)
                 "00000000100" when instrin = "10010000" else -- if(N=1) then PC <- end  sjn  (desvio condicional - jump on negative)
                 "00000000010" when instrin = "10100000" else -- if(Z=1) then PC <- end  sjz  (desvio condicional - jump on zero)
-                "00000000001" when instrin = "11110000";     --                         shlt (termino de execucao - halt)
+                "00000000001" when instrin = "11110000" else --                         shlt (termino de execucao - halt)
+                (others => 'Z'); --Coloquei por via das dúvidas
 end jorge;

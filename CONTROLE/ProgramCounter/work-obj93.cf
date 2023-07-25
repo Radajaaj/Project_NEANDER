@@ -1,0 +1,40 @@
+v 4
+file . "tb_somador.vhdl" "42657030071a97e215e0d21dbeca6b5eccded5e2" "20230725201753.908":
+  entity tb_somador at 1( 0) + 0 on 35;
+  architecture somancia of tb_somador at 7( 85) + 0 on 36;
+file . "tb_PC_separados.vhdl" "cd66dd2f05eeaf31fc21fc3011e87faa22e175ce" "20230725201753.907":
+  entity tb_pcsep at 1( 0) + 0 on 33;
+  architecture tbazem of tb_pcsep at 7( 83) + 0 on 34;
+file . "tb_PC.vhdl" "a89a5880c85d5f0a0d818e9b72e4fc014ed1a608" "20230725201753.905":
+  entity tb_pc at 1( 0) + 0 on 31;
+  architecture tbuzem of tb_pc at 7( 80) + 0 on 32;
+file . "tbmux2x8.vhdl" "5bdc8653b793a0d9842262aed0ab29166ca4e7b1" "20230725201753.904":
+  entity tb_mux at 1( 0) + 0 on 29;
+  architecture tbuzemu of tb_mux at 7( 81) + 0 on 30;
+file . "somador1bit.vhdl" "50f1513a788d9ecaddfc369634241a39b1434a94" "20230725201753.903":
+  entity somado1 at 1( 0) + 0 on 27;
+  architecture somindo of somado1 at 15( 260) + 0 on 28;
+file . "PC.vhdl" "f2e9b45919ba77864e93f0a2147eb0d3e6f27697" "20230725201753.902":
+  entity pc_tudo at 1( 0) + 0 on 25;
+  architecture programcounter of pc_tudo at 15( 315) + 0 on 26;
+file . "mux2x8.vhdl" "100e599e2a4789b7f8d013bc6b83e0b48cf68d4f" "20230725201753.901":
+  entity mux2x8 at 1( 0) + 0 on 23;
+  architecture hard8 of mux2x8 at 13( 246) + 0 on 24;
+file . "Mod_PC_PCRIP_regcarga8.vhdl" "5ab25d136978639fd279fd71f68243f9d3aa297a" "20230725201753.900":
+  entity pcrip8 at 1( 0) + 0 on 21;
+  architecture ripagem of pcrip8 at 15( 281) + 0 on 22;
+file . "BASE_somador8bits_PC.vhdl" "8e926085fc6ae3951f9934d3ab3343beddf8bbaf" "20230725201753.897":
+  entity somador8bits_pc at 1( 0) + 0 on 19;
+  architecture somagens of somador8bits_pc at 14( 322) + 0 on 20;
+file . "BASE_regCarga1.vhdl" "5ac09d87d636f7a2ab6778917ef499344d738c1b" "20230725201753.895":
+  entity regcarga1 at 1( 0) + 0 on 17;
+  architecture reg1 of regcarga1 at 14( 239) + 0 on 18;
+file . "BASE_mux2x1.vhdl" "5272794bce4dfac4ffd061a31caaadfc683256a5" "20230725201753.895":
+  entity mux2x1 at 1( 0) + 0 on 15;
+  architecture harrd of mux2x1 at 13( 176) + 0 on 16;
+file . "BASE_FFJK_DP.vhdl" "881b51bb274a158a2544e5909f7a31a70c1675b6" "20230725201753.894":
+  entity ffjk_d at 1( 0) + 0 on 13;
+  architecture hardfjkd of ffjk_d at 13( 249) + 0 on 14;
+file . "BASE_FFJK.vhdl" "c607c523eeee3dc115c97a527b52d375650bc3e9" "20230725201753.893":
+  entity fjk at 2( 1) + 0 on 11;
+  architecture latchjk of fjk at 14( 249) + 0 on 12;
