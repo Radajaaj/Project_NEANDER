@@ -41,6 +41,6 @@ begin
     s_PCatual <= s_endPC2MEM_elo;
 
     U_soma : somador8bits_PC port map ("00000000", s_PCatual, '1', s_sadd);
-    U_reg : PCRIP port map (s_mux2PC, clk, '1', cl, PC_rw, s_endPC2MEM_elo);
+    U_reg : PCRIP port map (s_mux2PC, clk, '1', cl, PC_rw, s_endPC2MEM);
 
     end architecture;
