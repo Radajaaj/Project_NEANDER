@@ -2,23 +2,30 @@ library ieee ;
     use ieee.std_logic_1164.all ;
     use ieee.numeric_std.all ;
 
-entity teste001 is
-end teste001 ; 
+entity teste023 is
+end teste023 ; 
 
-architecture archrr of teste001 is
+architecture arcashrr of teste023 is
 
-    component Mod_UC_JMPNZ is
+    entity UC is
         port (
-          EnterJMPNZ    : in  std_logic_vector(2 downto 0);
-          SaidaJMPNZ    : out std_logic_vector(10 downto 0)
+          EnterDecode     : in std_logic_vector(10 downto 0);
+          FlagsNZ         : in std_logic_vector(1 downto 0);
+          clk             : in std_logic;
+          cl              : in std_logic;
+          barrControle    : out std_logic_vector(10 downto 0)
         );
-      end component; 
+    end entity ; 
+      
 
-    signal S_enterJMPNZ :  std_logic_vector(2 downto 0);
-    signal  Saida_JMPNZ  :  std_logic_vector(10 downto 0);
+    signal s_ED :  std_logic_vector(10 downto 0);
+    signal  s_Fl  :  std_logic_vector(1 downto 0);
+    signal s_clk : std_logic;
+    signal s_cl : std_logic;
+    signal s_bC : std_logic_vector(10 downto 0);
 begin
 
-    TESTE: Mod_UC_JMPNZ port map (S_enterJMPNZ, Saida_JMPNZ);
+    TESTE: Mod_UC_JMPNZ port map (s_ED, s_Fl, s_clk, s_cl, s_bC);
 
     u_reset : process
     begin
@@ -27,35 +34,17 @@ begin
         S_enterJMPNZ <= "000";
         wait for 20 ns;
 
-       
-        S_enterJMPNZ <= "001";
-        wait for 20 ns;
-
-         
-        S_enterJMPNZ <= "010";
-        wait for 20 ns;
-
-         
-        S_enterJMPNZ <= "011";
-        wait for 20 ns;
-
-         
-        S_enterJMPNZ <= "100";
-        wait for 20 ns;
-
-         
-        S_enterJMPNZ <= "101";
-        wait for 20 ns;
-
-         
-        S_enterJMPNZ <= "110";
-        wait for 20 ns;
-
-         
-        S_enterJMPNZ <= "111";
-        wait for 20 ns;
-        wait for 20 ns;
+        s_ed <= "000000000000";
+        s_fl <= "00";
+        
 
     end process;
 
+
+    p_clock : process 
+        begin
+            sclk <= not(sclk);
+            wait for CLK_PERIOD/2;
+        end process;
+        
 end architecture ;
