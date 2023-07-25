@@ -8,8 +8,8 @@ architecture tbuzem of tb_PC is
 
     constant CLK_PERIOD : time := 20 ns;
 
-    component PC is
-        port (
+    component PC_tudo is
+        port(
           barr        : in std_logic_vector (7 downto 0);
           nbarrinc    : in std_logic;
           PC_rw       : in std_logic;
@@ -18,32 +18,32 @@ architecture tbuzem of tb_PC is
         );
       end component;
 
-    signal snbarrinc, sPC_rw, scl, sclk : std_logic;
+    signal snbarrinc, sPC_rw, scl : std_logic;
     signal sclk : std_logic := '1';
     signal sbarr, ss_endPC2MEM : std_logic_vector (7 downto 0);
 
 begin
  
-    u_PC : PC port map (sbarr, snbarrinc, sPC_rw, scl, sclk, ss_endPC2MEM);
+    u_PCtb : PC_tudo port map (sbarr, snbarrinc, sPC_rw, scl, sclk, ss_endPC2MEM);
 
     u_armando : process
     begin
         sbarr <= "01101001";
         scl <= '1';
 
-        sbarrinc <= '0';
+        snbarrinc <= '0';
         sPC_rw   <= '0';
         wait for 3*CLK_PERIOD;
 
-        sbarrinc <= '0';
+        snbarrinc <= '0';
         sPC_rw   <= '1';
         wait for 3*CLK_PERIOD;
 
-        sbarrinc <= '1';
+        snbarrinc <= '1';
         sPC_rw   <= '0';
         wait for 3*CLK_PERIOD;
 
-        sbarrinc <= '1';
+        snbarrinc <= '1';
         sPC_rw   <= '1';
         wait for 3*CLK_PERIOD;
 
