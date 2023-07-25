@@ -8,7 +8,7 @@ entity NEANDER is
   );
 end entity; 
 
-architecture ArchNeander of ent is
+architecture ArchNeander of NEANDER is
    
 ------------------------ULA----------------------------------------
     component ULA_tud is 
