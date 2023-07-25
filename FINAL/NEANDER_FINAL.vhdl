@@ -54,7 +54,6 @@ architecture ArchNeander of NEANDER is
   signal Barramento_Principal : std_logic_vector(7 downto 0);
   signal Barramento_Controle : std_logic_vector(10 downto 0);
   signal end_out_PC : std_logic_vector(7 downto 0);
-  signal end_out_MEM : std_logic_vector(7 downto 0);
   signal FLAGS_NZ : std_logic_vector(1 downto 0);
     
     
