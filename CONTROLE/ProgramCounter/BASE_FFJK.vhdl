@@ -1,3 +1,4 @@
+
 library ieee;
 use ieee.std_logic_1164.all; -- std_logic para detectar erros
  
@@ -9,8 +10,8 @@ entity FJK is
         q, nq  : out std_logic
     );
 end entity;
-
-architecture latc of FJK is
+  
+architecture latchjk of FJK is
     signal sq  : std_logic := '0'; -- opcional -> valor inicial
     signal snq : std_logic := '1';
 begin
