@@ -4,12 +4,11 @@ use ieee.std_logic_1164.all ;
 
 entity ControleAll is
   port (
-    Barramento_PC : in std_logic_vector(7 downto 0);
-    Barramento_RI : in std_logic_vector(7 downto 0);
+    Barramento_Dados : in std_logic_vector(7 downto 0);
     Flags_NZ : in std_logic_vector(1 downto 0);
     Clock : in std_logic;
     Clear : in std_logic;
-    Barramento_Controle : out std_logic_vector(7 downto 0);
+    Barramento_Controle : out std_logic_vector(10 downto 0)
   );
 end entity; 
 
@@ -52,16 +51,18 @@ architecture arch of ControleAll is
         );
   end component; 
 
-    signal Barramento_Dados : std_logic_vector(7 downto 0);
+    signal Barramento_PC, Barramento_RI : std_logic_vector(7 downto 0);
     signal Saida_PC, Saida_RI : std_logic_vector(7 downto 0);
     signal Saida_Decode : std_logic_vector(10 downto 0);
+    signal Barramento_instruct : std_logic_vector(10 downto 0);
     
 begin
     Barramento_PC <= Barramento_Dados;
     Barramento_RI <= Barramento_Dados;
+    Barramento_Controle <= Barramento_instruct;
 
-    u_PC : PC port map (Barramento_PC, Barramento_Controle(10), Barramento_Controle(5), Clear, Clock , Saida_PC);
-    u_RI : RIm port map (Barramento_RI, Clock, '1', Clear, Barramento_Controle(0), Saida_RI);
+    u_PC : PC port map (Barramento_PC, Barramento_instruct(10), Barramento_instruct(5), Clear, Clock , Saida_PC);
+    u_RI : RIm port map (Barramento_RI, Clock, '1', Clear, Barramento_instruct(0), Saida_RI);
     u_DEC : decodificador port map (Saida_RI, Saida_Decode);
     u_UC : UC port map (Saida_Decode, Flags_NZ, Clock, Clear, Barramento_Controle);
 
