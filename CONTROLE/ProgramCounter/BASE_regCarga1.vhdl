@@ -35,7 +35,7 @@ architecture reg1 of regCarga1 is
 begin
     s <= dataout;
     u_mux : mux2x1 port map(dataout, d, nrw, datain);
-    u_reg : FFJK_D port map(datain, clk, pr, cl, dataout, notd);
+    u_jjd : FFJK_D port map(datain, clk, pr, cl, dataout, notd);
    
 
 end architecture;

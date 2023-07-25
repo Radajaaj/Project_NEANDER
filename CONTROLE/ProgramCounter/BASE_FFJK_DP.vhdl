@@ -9,8 +9,8 @@ entity FFJK_D is
         q, nq  : out std_logic
     );
 end entity;
-
-architecture hard of FFJK_D is
+ 
+architecture hardfjkd of FFJK_D is
     component FJK is
         port(
             j, k   : in std_logic;
@@ -25,7 +25,7 @@ architecture hard of FFJK_D is
     signal nj  : std_logic;
 begin
 
-    u_d : FJK port map(d, nj, clk, pr, cl, q, nq);
+    u_ffd : FJK port map(d, nj, clk, pr, cl, q, nq);
     nj <= not(d);
     
 end architecture;

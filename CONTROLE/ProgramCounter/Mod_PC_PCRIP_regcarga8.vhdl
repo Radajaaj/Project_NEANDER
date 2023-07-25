@@ -1,7 +1,8 @@
-library ieee ;
-    use ieee.std_logic_1164.all ;
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
-entity PCRIP is
+entity PCRIP8 is
   port (
     d : in std_logic_vector(7 downto 0);
     Clock : in std_logic;
@@ -9,9 +10,9 @@ entity PCRIP is
     nrw : in std_logic;
     s : out std_logic_vector(7 downto 0)
   ) ;
-end entity ;
+end entity;
 
-architecture regis of PCRIP is
+architecture ripagem of PCRIP8 is
 
     component regCarga1 is
         port(
@@ -35,4 +36,4 @@ begin
     u_Reg_7 : regCarga1 port map(d(6), Clock, Preset, Clear, nrw, s(6));
     u_Reg_8 : regCarga1 port map(d(7), Clock, Preset, Clear, nrw, s(7));
     
-end architecture ;
+end architecture;

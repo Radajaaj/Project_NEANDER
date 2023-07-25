@@ -12,7 +12,7 @@ end entity;
 
 architecture hard8  of mux2x8 is 
 begin
-    
-    S <= A when sel = '1' else B;
+     
+    S <= A when sel = '0' else B;
     
 end architecture;
