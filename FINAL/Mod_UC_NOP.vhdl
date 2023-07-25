@@ -25,7 +25,7 @@ begin
   SaidaNOP(5)   <= (not(b2) and not(b1) and (b0));        --PC_rw
   SaidaNOP(4)   <= '0';                                   --AC_rw
   SaidaNOP(3)   <= '0';                                   --MEM_rw
-  SaidaNOP(2)   <= (not(b2 and b1 and b0));               --REM_rw
+  SaidaNOP(2)   <= (not(b2) and not(b1) and not(b0));     --REM_rw
   SaidaNOP(1)   <= (not(b2) and not(b1) and b0);          --RDM_rw
   SaidaNOP(0)   <= (not(b2) and b1 and not(b0));          --RI_rw
 end architecture ;
