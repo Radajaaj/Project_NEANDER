@@ -9,6 +9,7 @@ entity ControleAll is
     Flags_NZ : in std_logic_vector(1 downto 0);
     Clock : in std_logic;
     Clear : in std_logic;
+    PC_out : out std_logic_vector(7 downto 0);
     Barramento_Controle : out std_logic_vector(10 downto 0)
   );
 end entity; 
@@ -59,7 +60,7 @@ architecture arch of ControleAll is
     
 begin
     Barramento_Controle <= Barramento_instruct;
-
+    PC_out <= Saida_PC
     u_PC : PC_tudo port map (Barramento_PC, Barramento_instruct(10), Barramento_instruct(5), Clear, Clock , Saida_PC);
     u_RI : RIm port map (Barramento_RI, Clock, '1', Clear, Barramento_instruct(0), Saida_RI);
     u_DEC : decodificador port map (Saida_RI, Saida_Decode);

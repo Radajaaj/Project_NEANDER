@@ -40,31 +40,29 @@ architecture ArchNeander of NEANDER is
 ------------------------CONTROLE------------------------------------
     component ControleAll is
       port (
-        Barramento_PC         : in std_logic_vector(7 downto 0);
-        Barramento_RI         : in std_logic_vector(7 downto 0);
-        Flags_NZ              : in std_logic_vector(1 downto 0);
-        Clock                 : in std_logic;
-        Clear                 : in std_logic;
-        Barramento_Controle   : out std_logic_vector(10 downto 0)
+        Barramento_PC : in std_logic_vector(7 downto 0);
+        Barramento_RI : in std_logic_vector(7 downto 0);
+        Flags_NZ : in std_logic_vector(1 downto 0);
+        Clock : in std_logic;
+        Clear : in std_logic;
+        PC_out : out std_logic_vector(7 downto 0);
+        Barramento_Controle : out std_logic_vector(10 downto 0)
       );
-    end component; 
 
 ------------------------SIGNALS-------------------------------------
 
   signal Barramento_Principal : std_logic_vector(7 downto 0);
   signal Barramento_Controle : std_logic_vector(10 downto 0);
   signal end_out_PC : std_logic_vector(7 downto 0);
-  signal end_out_MEM : std_logic_vector(7 downto 0);
   signal FLAGS_NZ : std_logic_vector(1 downto 0);
     
     
 begin
-
-  u_MEMORIA : modulo_Mem port map (end_out_PC, Barramento_Principal, barramento_Controle(9), barramento_Controle(2), barramento_Controle(3), barramento_Controle(1), Resetar, Clock, Barramento_Principal);
-
   u_ULA : ULA_tud port map (Barramento_Principal, barramento_Controle(3), barramento_Controle(4), barramento_Controle(8 downto 6), Resetar, Clock, FLAGS_NZ);
 
-  u_CONTROLE : ControleAll port map (Barramento_Principal, Barramento_Principal, FLAGS_NZ, Clock, Resetar, Barramento_Controle); 
+  u_MEMORIA : modulo_Mem port map (end_out_PC, Barramento_Principal, barramento_Controle(9), barramento_Controle(2), barramento_Controle(3), barramento_Controle(1), Resetar, Clock, Barramento_Principal);
+  
+  u_CONTROLE : ControleAll port map (Barramento_Principal, Barramento_Principal, FLAGS_NZ, Clock, Resetar, end_out_PC, Barramento_Controle); 
 
 
 end architecture ;

@@ -90,18 +90,18 @@ begin
   U_NOT     : Mod_UC_NOT    port map (sinal_cont);
   U_STA     : Mod_UC_STA    port map (sinal_cont);
   
-  barrControle <= saidaHLT      when sinal_DECODENZ = "0000000000001";
-  barrControle <= saidaJMP      when sinal_DECODENZ = "0000000001000";
-  barrControle <= saidaJMP      when sinal_DECODENZ = "1000000000100";
-  barrControle <= saidaJMP      when sinal_DECODENZ = "0100000000010";
-  barrControle <= saidaJMPNZ    when sinal_DECODENZ = "0000000000100";
-  barrControle <= saidaJMPNZ    when sinal_DECODENZ = "0000000000010";
-  barrControle <= saidaNOP      when sinal_DECODENZ = "0010000000000";
-  barrControle <= saidaNOT      when sinal_DECODENZ = "0000000010000";
-  barrControle <= saidaSTA      when sinal_DECODENZ = "0001000000000";
-  barrControle <= saidaLDA      when sinal_DECODENZ = "0000100000000";
-  barrControle <= saidaLDA      when sinal_DECODENZ = "0000010000000";
-  barrControle <= saidaLDA      when sinal_DECODENZ = "0000001000000";
-  barrControle <= saidaLDA      when sinal_DECODENZ = "0000000100000";
+  barrControle   <= saidaHLT    when sinal_DECODENZ = "0000000000001" else
+                  saidaJMP      when sinal_DECODENZ = "0000000001000" else
+                  saidaJMP      when sinal_DECODENZ = "1000000000100" else
+                  saidaJMP      when sinal_DECODENZ = "0100000000010" else
+                  saidaJMPNZ    when sinal_DECODENZ = "0000000000100" else
+                  saidaJMPNZ    when sinal_DECODENZ = "0000000000010" else
+                  saidaNOP      when sinal_DECODENZ = "0010000000000" else
+                  saidaNOT      when sinal_DECODENZ = "0000000010000" else
+                  saidaSTA      when sinal_DECODENZ = "0001000000000" else
+                  saidaLDA      when sinal_DECODENZ = "0000100000000" else
+                  saidaLDA      when sinal_DECODENZ = "0000010000000" else
+                  saidaLDA      when sinal_DECODENZ = "0000001000000" else
+                  saidaLDA      when sinal_DECODENZ = "0000000100000";
 
 end architecture;
