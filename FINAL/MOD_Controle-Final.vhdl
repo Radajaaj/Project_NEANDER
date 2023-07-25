@@ -58,8 +58,6 @@ architecture arch of ControleAll is
     signal Barramento_instruct : std_logic_vector(10 downto 0);
     
 begin
-    Barramento_Dados <= Barramento_PC;
-    Barramento_Dados <= Barramento_RI;
     Barramento_Controle <= Barramento_instruct;
 
     u_PC : PC port map (Barramento_PC, Barramento_instruct(10), Barramento_instruct(5), Clear, Clock , Saida_PC);
