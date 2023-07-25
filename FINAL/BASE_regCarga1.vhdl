@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-
+ 
 entity regCarga1 is
     port(
         d : in std_logic;
@@ -30,12 +30,12 @@ architecture reg1 of regCarga1 is
         );
     end component;
 
-    signal datain, dataout : std_logic; 
+    signal datain, dataout, notd : std_logic; 
     
 begin
     s <= dataout;
     u_mux : mux2x1 port map(dataout, d, nrw, datain);
-    u_reg : FFJK_D port map(datain, clk, pr, cl, dataout);
+    u_reg : FFJK_D port map(datain, clk, pr, cl, dataout, notd);
    
 
 end architecture;

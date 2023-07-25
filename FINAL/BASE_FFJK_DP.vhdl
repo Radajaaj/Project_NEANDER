@@ -25,8 +25,7 @@ architecture hard of FFJK_D is
     signal nj  : std_logic;
 begin
 
-    nj <= not(d);
     u_d : FJK port map(d, nj, clk, pr, cl, q, nq);
+    nj <= not(d);
     
-
 end architecture;

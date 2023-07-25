@@ -22,7 +22,7 @@ architecture arch of ControleAll is
         );
     end component;
 
-    component PC is
+    component PCRIP is
         port (
             barr        : in std_logic_vector (7 downto 0);
             nbarrinc    : in std_logic;
@@ -58,9 +58,11 @@ architecture arch of ControleAll is
     signal Barramento_instruct : std_logic_vector(10 downto 0);
     
 begin
+    Barramento_Dados <= Barramento_PC;
+    Barramento_Dados <= Barramento_RI;
     Barramento_Controle <= Barramento_instruct;
 
-    u_PC : PC port map (Barramento_PC, Barramento_instruct(10), Barramento_instruct(5), Clear, Clock , Saida_PC);
+    u_PC : PCRIP port map (Barramento_PC, Barramento_instruct(10), Barramento_instruct(5), Clear, Clock , Saida_PC);
     u_RI : RIm port map (Barramento_RI, Clock, '1', Clear, Barramento_instruct(0), Saida_RI);
     u_DEC : decodificador port map (Saida_RI, Saida_Decode);
     u_UC : UC port map (Saida_Decode, Flags_NZ, Clock, Clear, Barramento_Controle);

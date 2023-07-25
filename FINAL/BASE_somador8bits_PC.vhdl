@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
- 
+  
 entity somador8bits_PC is
     port(
         Asum   : in  std_logic_vector (7 downto 0);
@@ -22,7 +22,7 @@ architecture somagens of somador8bits_PC is
             );
     end component; 
 
-    signal carry : std_logic_vector (7 downto 0);
+    signal carry : std_logic_vector (6 downto 0);
 
     begin
 
@@ -55,7 +55,7 @@ architecture somagens of somador8bits_PC is
         );
 
         u_soma7 : somado port map (
-            Asum(7), Bsum(7), carry(6), Sumado(7), carry(7)
+            Asum(7), Bsum(7), carry(6), Sumado(7), Cout
         );
     end architecture;
 
