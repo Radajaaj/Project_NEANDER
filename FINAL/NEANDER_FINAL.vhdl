@@ -48,7 +48,7 @@ architecture ArchNeander of NEANDER is
         PC_out : out std_logic_vector(7 downto 0);
         Barramento_Controle : out std_logic_vector(10 downto 0)
       );
-
+    end component;
 ------------------------SIGNALS-------------------------------------
 
   signal Barramento_Principal : std_logic_vector(7 downto 0);
