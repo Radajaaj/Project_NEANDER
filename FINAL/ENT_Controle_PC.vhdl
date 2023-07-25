@@ -11,7 +11,7 @@ entity PC_tudo is
   );
 end entity;
 
-architecture programcounter of PCc is
+architecture programcounter of PC_Tudo is
     component somador8bits_PC is
         port (
             Asum   : in  std_logic_vector (7 downto 0);
