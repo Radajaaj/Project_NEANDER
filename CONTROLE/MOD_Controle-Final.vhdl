@@ -4,7 +4,8 @@ use ieee.std_logic_1164.all ;
 
 entity ControleAll is
   port (
-    Barramento_Dados : in std_logic_vector(7 downto 0);
+    Barramento_PC : in std_logic_vector(7 downto 0);
+    Barramento_RI : in std_logic_vector(7 downto 0);
     Flags_NZ : in std_logic_vector(1 downto 0);
     Clock : in std_logic;
     Clear : in std_logic;
@@ -51,14 +52,14 @@ architecture arch of ControleAll is
         );
   end component; 
 
-    signal Barramento_PC, Barramento_RI : std_logic_vector(7 downto 0);
+    signal Barramento_Dados: std_logic_vector(7 downto 0);
     signal Saida_PC, Saida_RI : std_logic_vector(7 downto 0);
     signal Saida_Decode : std_logic_vector(10 downto 0);
     signal Barramento_instruct : std_logic_vector(10 downto 0);
     
 begin
-    Barramento_PC <= Barramento_Dados;
-    Barramento_RI <= Barramento_Dados;
+    Barramento_Dados <= Barramento_PC;
+    Barramento_Dados <= Barramento_RI;
     Barramento_Controle <= Barramento_instruct;
 
     u_PC : PC port map (Barramento_PC, Barramento_instruct(10), Barramento_instruct(5), Clear, Clock , Saida_PC);

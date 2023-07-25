@@ -1,0 +1,58 @@
+v 4
+file . "tb_Contador3BITS.vhdl" "786cbcf7f2f4c4436adf88dc0e71afcb771160a9" "20230725115625.257":
+  entity tb_contador at 1( 0) + 0 on 47;
+  architecture conza of tb_contador at 7( 86) + 0 on 48;
+file . "Mod_UC_STA.vhdl" "6278583b636e31dcd7f24288d73726eee2123763" "20230725115625.256":
+  entity mod_uc_sta at 1( 0) + 0 on 45;
+  architecture archsta of mod_uc_sta at 11( 196) + 0 on 46;
+file . "Mod_UC_NOT.vhdl" "b43d9a6efffa60b2cf070d268a52881977565e30" "20230725115625.256":
+  entity mod_uc_not at 1( 0) + 0 on 43;
+  architecture archnot of mod_uc_not at 11( 203) + 0 on 44;
+file . "Mod_UC_NOP.vhdl" "a8fa48002c75b2137fb3970277884b3566c53e16" "20230725115625.256":
+  entity mod_uc_nop at 1( 0) + 0 on 41;
+  architecture archnop of mod_uc_nop at 11( 196) + 0 on 42;
+file . "Mod_UC_LDA.vhdl" "e0f1855ac95b1f6f52803b3647630b7d1f211c37" "20230725115625.255":
+  entity mod_uc_lda at 1( 0) + 0 on 39;
+  architecture archlda of mod_uc_lda at 12( 256) + 0 on 40;
+file . "Mod_UC_JMP.vhdl" "0cc7ee91bca79db85b978bc2e1d7c22d9d943650" "20230725115625.255":
+  entity mod_uc_jmp at 1( 0) + 0 on 37;
+  architecture archjmp of mod_uc_jmp at 11( 203) + 0 on 38;
+file . "Mod_UC_JMPNZ.vhdl" "2f38a918b56a302b2198ea50fe44edd0192659db" "20230725115625.254":
+  entity mod_uc_jmpnz at 1( 0) + 0 on 35;
+  architecture archjmpnz of mod_uc_jmpnz at 11( 209) + 0 on 36;
+file . "Mod_UC_HLT.vhdl" "1accef1407a41600cdc9ce44eb53c53d2061f401" "20230725115625.254":
+  entity mod_uc_hlt at 1( 0) + 0 on 33;
+  architecture archhlt of mod_uc_hlt at 11( 203) + 0 on 34;
+file . "MOD_UC_Contador.vhdl" "05207326b46d0bb6ef00c34cc0d4dfc18ad7d1ba" "20230725115625.254":
+  entity contador3bits at 1( 0) + 0 on 31;
+  architecture contagem of contador3bits at 13( 245) + 0 on 32;
+file . "Mod_PC_PCRIP.vhdl" "04ae4d55a9cfdd6bb28536159f4c39969f6b361b" "20230725115625.253":
+  entity pcrip at 1( 0) + 0 on 29;
+  architecture regis of pcrip at 14( 262) + 0 on 30;
+file . "MOD_Controle-Final.vhdl" "bc0f485f19ec91548b6a6a722085718abdbf4f8a" "20230725115625.253":
+  entity controleall at 1( 0) + 0 on 27;
+  architecture arch of controleall at 15( 315) + 0 on 28;
+file . "ENT_Controle_RI.vhdl" "d5af2c5ffc5a4c4299d6e8adeeef5de5b1b7d300" "20230725115625.253":
+  entity rim at 1( 0) + 0 on 25;
+  architecture arch of rim at 14( 261) + 0 on 26;
+file . "ENT_Controle_decode.vhdl" "ab7c5ad3f7c4c0936d6bccb7bf5e49a0f579897c" "20230725115625.252":
+  entity decodificador at 1( 0) + 0 on 23;
+  architecture jorge of decodificador at 11( 196) + 0 on 24;
+file . "BASE_somador8bits_PC.vhdl" "f9ee2f307f585dc6d5fa10333ca873ec99b1f8cd" "20230725115625.252":
+  entity somador8bits_pc at 1( 0) + 0 on 21;
+  architecture somagens of somador8bits_pc at 14( 321) + 0 on 22;
+file . "BASE_regCarga1.vhdl" "fdfdcdec7df17d0ec726119e6364144351b728e5" "20230725115625.252":
+  entity regcarga1 at 1( 0) + 0 on 19;
+  architecture reg1 of regcarga1 at 14( 238) + 0 on 20;
+file . "BASE_mux2x1.vhdl" "baab72cfbcb6721fe3994eb009198e1a57cc15cd" "20230725115625.251":
+  entity mux2x1 at 1( 0) + 0 on 17;
+  architecture hard of mux2x1 at 13( 176) + 0 on 18;
+file . "BASE_FFJK.vhdl" "bf52b678592f1e292e6a00da7c01bed7dc04fb76" "20230725115625.251":
+  entity fjk at 1( 0) + 0 on 15;
+  architecture latc of fjk at 13( 246) + 0 on 16;
+file . "BASE_FFJK_DP.vhdl" "a2e7f5a3fcc6dc2265d8f54bc1bdf69b2a8d3877" "20230725115625.251":
+  entity ffjk_d at 1( 0) + 0 on 13;
+  architecture hard of ffjk_d at 13( 248) + 0 on 14;
+file . "BASE_ctrl.vhdl" "c5f787007493f0ad381f85512417ab498675027d" "20230725115625.250":
+  entity ctrl at 1( 0) + 0 on 11;
+  architecture control of ctrl at 12( 218) + 0 on 12;
