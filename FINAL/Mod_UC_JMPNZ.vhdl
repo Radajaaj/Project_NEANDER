@@ -25,7 +25,7 @@ begin
   SaidaJMPNZ(5)   <= (not(b2) and (b0));                    --PC_rw
   SaidaJMPNZ(4)   <= '0';                                   --AC_rw
   SaidaJMPNZ(3)   <= '0';                                   --MEM_rw
-  SaidaJMPNZ(2)   <= (not(b2 and b1 and b0));               --REM_rw
+  SaidaJMPNZ(2)   <= (not(b2) and not(b1) and not(b0));     --REM_rw
   SaidaJMPNZ(1)   <= (not(b2) and not(b1) and b0);          --RDM_rw
   SaidaJMPNZ(0)   <= (not(b2) and b1 and not(b0));          --RI_rw
-end architecture ;
+end architecture;
