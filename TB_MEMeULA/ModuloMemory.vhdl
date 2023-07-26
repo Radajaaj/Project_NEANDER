@@ -17,34 +17,24 @@ end entity;
 
 architecture memoriando of modulo_Mem is
     
-    component mux2x8 is port
-    (
-        Bar : in std_logic_vector(7 downto 0 ) ;
-        PC : in std_logic_vector(7 downto 0 ) ;
+    component mux2x8 is 
+        port(
+        A : in std_logic_vector (7 downto 0);
+        B : in std_logic_vector (7 downto 0);
         sel : in std_logic;
-        S : out std_logic_vector(7 downto 0 )
-    );
+        S : out std_logic_vector (7 downto 0)
+        );
     end component;
 
-    component Reg_REM is
+    component reg8bits is
         port (
-          re_m : in std_logic_vector(7 downto 0);
+          d : in std_logic_vector(7 downto 0);
           Clock : in std_logic;
           Preset, Clear : in std_logic;
           nrw : in std_logic;
           s : out std_logic_vector(7 downto 0)
-        );
-    end component; 
-
-    component Reg_RDM is
-        port (
-          rdm : in std_logic_vector(7 downto 0);
-          Clock : in std_logic;
-          Preset, Clear : in std_logic;
-          nrw : in std_logic;
-          s : out std_logic_vector(7 downto 0)
-        );
-    end component; 
+        ) ;
+      end component; 
 
     component as_ram is
         port(
@@ -54,7 +44,7 @@ architecture memoriando of modulo_Mem is
             reset : in    std_logic  --cl
         );
     end component as_ram;
-
+ 
     signal s_mux2rem, s_rem2mem, s_mem2rdm, s_rdm2barramento : std_logic_vector(7 downto 0); 
 
     begin
@@ -65,8 +55,8 @@ architecture memoriando of modulo_Mem is
                                            else (others => 'Z');
         
         u_Mux2x8  : mux2x8  port map(end_Barr, end_PC, nBarrPC, s_mux2rem);
-        u_REM     : Reg_REM port map(s_mux2rem, clk, '1', reset, REM_rw, s_rem2mem);
+        u_REM     : reg8bits port map(s_mux2rem, clk, '1', reset, REM_rw, s_rem2mem);
         u_Memoria : as_ram  port map(s_rem2mem, s_mem2rdm, MEM_rw, reset);
-        u_RDM     : Reg_RDM port map(s_mem2rdm, clk, '1', reset, RDM_rw, s_rdm2barramento);
+        u_RDM     : reg8bits port map(s_mem2rdm, clk, '1', reset, RDM_rw, s_rdm2barramento);
 
 end architecture;

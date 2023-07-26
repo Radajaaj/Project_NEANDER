@@ -11,7 +11,7 @@ entity somador8bit is
     );
 end entity;
  
-architecture somagem of somador8bit is
+architecture somalia of somador8bit is
     component somado1 is
         port(
             a    : in std_logic;
@@ -55,7 +55,7 @@ architecture somagem of somador8bit is
         );
 
         u_soma7 : somado1 port map (
-            Asum(7), Bsum(7), carry(6), Sumado(7), carry(7)
+            Asum(7), Bsum(7), carry(6), Sumado(7), Cout
         );
     end architecture;
 

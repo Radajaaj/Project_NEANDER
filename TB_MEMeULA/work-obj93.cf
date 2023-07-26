@@ -1,0 +1,64 @@
+v 4
+file . "as_ram.vhdl" "3f73ba77f28abe495e9836860db5e4964f04d021" "20230726044256.518":
+  entity as_ram at 2( 42) + 0 on 221;
+  architecture behavior of as_ram at 16( 325) + 0 on 222;
+file . "Detector_NZ.vhdl" "6d308367f0704998653588523c4b11a61bab09cf" "20230726044256.519":
+  entity detector_nz at 1( 0) + 0 on 223;
+  architecture hard of detector_nz at 10( 190) + 0 on 224;
+file . "FFJK.vhdl" "30ec004953dc5d77bf81ae6dad39f435e4222199" "20230726044256.521":
+  entity fjk at 1( 0) + 0 on 225;
+  architecture latc of fjk at 13( 245) + 0 on 226;
+file . "FFJK_DP copy.vhdl" "5ee364c37100e51b79da9c12f31d741621b61c19" "20230726044256.522":
+  entity ffjkd at 1( 0) + 0 on 227;
+  architecture hardware of ffjkd at 13( 247) + 0 on 228;
+file . "FFJK_DP.vhdl" "a2e7f5a3fcc6dc2265d8f54bc1bdf69b2a8d3877" "20230726044256.522":
+  entity ffjk_d at 1( 0) + 0 on 229;
+  architecture hard of ffjk_d at 13( 248) + 0 on 230;
+file . "ModuloMemory.vhdl" "bdaf2c5b6b241e7d757ad56d5fa01f091b5d6612" "20230726044256.524":
+  entity modulo_mem at 1( 0) + 0 on 231;
+  architecture memoriando of modulo_mem at 18( 437) + 0 on 232;
+file . "mux2x1.vhdl" "cec6dad5f867f20792110d4b4ca59126bc095169" "20230726044256.525":
+  entity mux2x1 at 1( 0) + 0 on 233;
+  architecture hard of mux2x1 at 13( 188) + 0 on 234;
+file . "mux2x8.vhdl" "9631fa60800542ab79abfaf8e0aac68be12ed490" "20230726044256.526":
+  entity mux2x8 at 1( 0) + 0 on 235;
+  architecture hard of mux2x8 at 13( 249) + 0 on 236;
+file . "mux5x8.vhdl" "7c5b68396d79e8fc0ce999013b3e00cb4ac2ff45" "20230726044256.527":
+  entity mux5x8 at 1( 0) + 0 on 237;
+  architecture hard of mux5x8 at 16( 440) + 0 on 238;
+file . "regCarga1bit.vhdl" "c0fa602e427cb0f2ca030fd1c50d36bcb0c48062" "20230726044256.529":
+  entity regcarga1bit at 1( 0) + 0 on 239;
+  architecture reg1 of regcarga1bit at 14( 254) + 0 on 240;
+file . "regCarga2bits.vhdl" "c03ad44e336c8e6f0d4327fb297b85be57dd3f84" "20230726044256.530":
+  entity reg2bits at 1( 0) + 0 on 241;
+  architecture hard of reg2bits at 14( 265) + 0 on 242;
+file . "regCarga8bits.vhdl" "a42dfa0fc733be14c0442e9d920953fe5c9d4ffe" "20230726044256.531":
+  entity reg8bits at 1( 0) + 0 on 243;
+  architecture arch of reg8bits at 14( 265) + 0 on 244;
+file . "Reg_RDM.vhdl" "c5ff00e09f6b0a179c91a17b321c0f6146e9f7d2" "20230726044231.906":
+  entity reg_rdm at 1( 0) + 0 on 203;
+  architecture arch of reg_rdm at 14( 266) + 0 on 204;
+file . "Reg_REM.vhdl" "b95b740a5d502291d4d0a6d5a05f2c2caf4d7ecf" "20230726044231.907":
+  entity reg_rem at 1( 0) + 0 on 205;
+  architecture arch of reg_rem at 14( 267) + 0 on 206;
+file . "somador.vhdl" "cd8923f8e32fb09c2eff48b39e4ce46f6b26de08" "20230726044256.532":
+  entity somado at 1( 0) + 0 on 245;
+  architecture comuta of somado at 15( 257) + 0 on 246;
+file . "somador8bits.vhdl" "6df40d0ac3d84c8cd93b27e2923d7311ec8c460c" "20230726044256.534":
+  entity somador8bit at 1( 0) + 0 on 247;
+  architecture somagem of somador8bit at 14( 317) + 0 on 248;
+file . "tb_as_ram.vhdl" "bfefe731229ad8ce9415f071d736bf321b0ab039" "20230726044256.535":
+  entity tb_as_ram at 1( 0) + 0 on 249;
+  architecture tb_behavior of tb_as_ram at 9( 126) + 0 on 250;
+file . "tb_NEANDER_00-ULA.vhdl" "35a923ef2783bc480cb856310c50c4e70d7b449f" "20230726044256.537":
+  entity tb_modula at 24( 1103) + 0 on 251;
+  architecture quickmath of tb_modula at 31( 1191) + 0 on 252;
+file . "tb_NEANDER_01-ULA_MEM.vhdl" "91d513e9fd7052c0ea9239f84f72f12f756e78f5" "20230726044256.541":
+  entity tb_moduloulamem at 24( 1170) + 0 on 253;
+  architecture quickmath of tb_moduloulamem at 30( 1269) + 0 on 254;
+file . "ULA.vhdl" "4d452a9722bfa05a3ac81fb5cccb78961599d292" "20230726044256.543":
+  entity ula at 1( 0) + 0 on 255;
+  architecture arch of ula at 13( 308) + 0 on 256;
+file . "ULA_tudo.vhdl" "b052e86c6a64357af5a3371c2cd0cfb0a14bd4ec" "20230726044256.545":
+  entity ula_tud at 1( 0) + 0 on 257;
+  architecture ulagem of ula_tud at 16( 361) + 0 on 258;
