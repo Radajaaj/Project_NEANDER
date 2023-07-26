@@ -1,10 +1,11 @@
-library IEEE;
+library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-entity TB_NEANDER is 
+entity rb_NEANDER_junto is 
 end entity;
 
-architecture Neanderzin of TB_NEANDER is 
+architecture Neanderzin of rb_NEANDER_junto is 
     constant CLK_PERIOD : time:= 20 ns;
 
     component NEANDER is

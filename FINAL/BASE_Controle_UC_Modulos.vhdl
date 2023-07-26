@@ -1,8 +1,8 @@
 --===--====-------====--===--=====--===--====-------====--===--
 --===--====-------====--===-- NOP --===--====-------====--===--
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 
 entity Mod_UC_NOP is
@@ -38,9 +38,9 @@ end architecture ;
 
 --===--====-------====--===--=====--===--====-------====--===--
 --===--====-------====--===-- STA --===--====-------====--===--
-
-library ieee ;
-    use ieee.std_logic_1164.all ;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity Mod_UC_STA is
   port (
@@ -76,8 +76,9 @@ end architecture ;
 
 --===--====-------====--===--=====--===--====-------====--===--
 --===--====-------====--===-- LDA --===--====-------====--===--
-library ieee ;
-    use ieee.std_logic_1164.all ;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity Mod_UC_LDA is
   port (
@@ -114,9 +115,9 @@ end architecture ;
 
 --===--====-------====--===--=====--===--====-------====--===--
 --===--====-------====--===-- NOT --===--====-------====--===--
-
-library ieee ;
-    use ieee.std_logic_1164.all ;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity Mod_UC_NOT is
   port (
@@ -152,9 +153,9 @@ end architecture ;
 
 --===--====-------====--===--=====--===--====-------====--===--
 --===--====-------====--===-- JMP --===--====-------====--===--
-
-library ieee ;
-    use ieee.std_logic_1164.all ;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity Mod_UC_JMP is
   port (
@@ -190,9 +191,9 @@ end architecture ;
 
 --===--====-------====--===--=====--===--====-------====--===--
 --===--====-------====--===- JMPNZ -===--====-------====--===--
-
-library ieee ;
-    use ieee.std_logic_1164.all ;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
  
 entity Mod_UC_JMPNZ is
   port (
@@ -228,9 +229,9 @@ end architecture;
 
 --===--====-------====--===--=====--===--====-------====--===--
 --===--====-------====--===-- HLT --===--====-------====--===--
-
-library ieee ;
-    use ieee.std_logic_1164.all ;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity Mod_UC_HLT is
   port (
