@@ -64,7 +64,7 @@ begin
     u_PC  : PC_tudo port map (Barramento_PC, Barramento_instruct(10), Barramento_instruct(5), Clear, Clock, PC_out);
     u_RI  : reg8bits port map (Barramento_RI, Clock, '1', Clear, Barramento_instruct(0), Saida_RI);
     u_DEC : decodificador port map (Saida_RI, Saida_Decode);
-    u_UC  : UC port map (Saida_Decode, Flags_NZ, Clock, Clear, Barramento_instruct);
+    u_UC  : UC port map ("10000000000", Flags_NZ, Clock, Clear, Barramento_instruct);
                                              --talvez deva ser Barramento_instruct? ou o contrario?
 
 end architecture ; 

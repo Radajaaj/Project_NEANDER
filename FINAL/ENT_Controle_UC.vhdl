@@ -85,7 +85,7 @@ architecture archUC of UC is
   signal s_STA          : std_logic_vector(10 downto 0);
   
 begin
-
+    
   sinal_DECODENZ(12 downto 11)  <= FlagsNZ;
   sinal_DECODENZ(10 downto 0)   <= EnterDecode;
   

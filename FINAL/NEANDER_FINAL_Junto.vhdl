@@ -57,7 +57,7 @@ architecture ArchNeander of NEANDER is
   signal end_out_PC : std_logic_vector(7 downto 0);
   signal FLAGS_NZ : std_logic_vector(1 downto 0);
     
-    
+  
 begin
   u_ULA : ULA_tud port map (Barramento_Principal, barramento_Controle(3), barramento_Controle(4), barramento_Controle(8 downto 6), Resetar, Clock, FLAGS_NZ);
 
