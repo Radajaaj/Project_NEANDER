@@ -1,5 +1,6 @@
 library ieee ;
 use ieee.std_logic_1164.all ;
+
 entity UC is
   port (
     EnterDecode     : in std_logic_vector(10 downto 0);
@@ -74,34 +75,41 @@ architecture archUC of UC is
 
   signal sinal_DECODENZ : std_logic_vector(12 downto 0);
   signal sinal_cont     : std_logic_vector(2 downto 0);
+  signal s_HLT          : std_logic_vector(10 downto 0);
+  signal s_JMP          : std_logic_vector(10 downto 0);
+  signal s_JMPNZ        : std_logic_vector(10 downto 0);
+  signal s_LDA          : std_logic_vector(10 downto 0);
+  signal s_NOP          : std_logic_vector(10 downto 0);
+  signal s_NOT          : std_logic_vector(10 downto 0);
+  signal s_STA          : std_logic_vector(10 downto 0);
   
 begin
 
   sinal_DECODENZ(12 downto 11)  <= FlagsNZ;
   sinal_DECODENZ(10 downto 0)   <= EnterDecode;
-  Sai                           <= sinal_cont;
   
-  U_CONT    : contador3bits port map (clk, cl, '1');
-  U_HLT     : Mod_UC_HLT    port map (sinal_cont);
-  U_JMP     : Mod_UC_JMP    port map (sinal_cont);
-  U_JMPNZ   : Mod_UC_JMPNZ  port map (sinal_cont);
-  U_LDA     : Mod_UC_LDA    port map (sinal_cont, EnterDecode);
-  U_NOP     : Mod_UC_NOP    port map (sinal_cont);
-  U_NOT     : Mod_UC_NOT    port map (sinal_cont);
-  U_STA     : Mod_UC_STA    port map (sinal_cont);
   
-  barrControle   <= saidaHLT    when sinal_DECODENZ = "0000000000001" else
-                  saidaJMP      when sinal_DECODENZ = "0000000001000" else
-                  saidaJMP      when sinal_DECODENZ = "1000000000100" else
-                  saidaJMP      when sinal_DECODENZ = "0100000000010" else
-                  saidaJMPNZ    when sinal_DECODENZ = "0000000000100" else
-                  saidaJMPNZ    when sinal_DECODENZ = "0000000000010" else
-                  saidaNOP      when sinal_DECODENZ = "0010000000000" else
-                  saidaNOT      when sinal_DECODENZ = "0000000010000" else
-                  saidaSTA      when sinal_DECODENZ = "0001000000000" else
-                  saidaLDA      when sinal_DECODENZ = "0000100000000" else
-                  saidaLDA      when sinal_DECODENZ = "0000010000000" else
-                  saidaLDA      when sinal_DECODENZ = "0000001000000" else
-                  saidaLDA      when sinal_DECODENZ = "0000000100000";
+  U_CONT    : contador3bits port map (clk, cl, '1', sinal_cont);
+  U_HLT     : Mod_UC_HLT    port map (sinal_cont, s_HLT);
+  U_JMP     : Mod_UC_JMP    port map (sinal_cont, s_JMP);
+  U_JMPNZ   : Mod_UC_JMPNZ  port map (sinal_cont, s_JMPNZ);
+  U_LDA     : Mod_UC_LDA    port map (sinal_cont, EnterDecode, s_LDA);
+  U_NOP     : Mod_UC_NOP    port map (sinal_cont, s_NOP);
+  U_NOT     : Mod_UC_NOT    port map (sinal_cont, s_NOT);
+  U_STA     : Mod_UC_STA    port map (sinal_cont, s_STA);
+  
+  barrControle   <= s_HLT    when sinal_DECODENZ = "0000000000001" else
+                  s_JMP      when sinal_DECODENZ = "0000000001000" else
+                  s_JMP      when sinal_DECODENZ = "1000000000100" else
+                  s_JMP      when sinal_DECODENZ = "0100000000010" else
+                  s_JMPNZ    when sinal_DECODENZ = "0000000000100" else
+                  s_JMPNZ    when sinal_DECODENZ = "0000000000010" else
+                  s_NOP      when sinal_DECODENZ = "0010000000000" else
+                  s_NOT      when sinal_DECODENZ = "0000000010000" else
+                  s_STA      when sinal_DECODENZ = "0001000000000" else
+                  s_LDA      when sinal_DECODENZ = "0000100000000" else
+                  s_LDA      when sinal_DECODENZ = "0000010000000" else
+                  s_LDA      when sinal_DECODENZ = "0000001000000" else
+                  s_LDA      when sinal_DECODENZ = "0000000100000";
 
 end architecture;
