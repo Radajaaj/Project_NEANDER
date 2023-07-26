@@ -6,7 +6,7 @@ entity teste023 is
 end teste023 ; 
 
 architecture arcashrr of teste023 is
-    constant CLK_PERIOD : time:= 10 ns;
+    constant CLK_PERIOD : time:= 20 ns;
 
 
     component UC is
@@ -34,68 +34,72 @@ begin
 
         s_ed <= "10000000000";
         s_fl <= "00";
-        s_cl <= '1';
+        s_cl <= '0';
         wait for CLK_PERIOD;
+
+        s_ed <= "10000000000";
+        s_fl <= "00";
+        s_cl <= '1';
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "01000000000";
         s_fl <= "00";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00100000000";
         s_fl <= "00";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+        
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00010000000";
         s_fl <= "00";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+        
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00001000000";
         s_fl <= "00";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+        
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00000100000";
         s_fl <= "00";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+       
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00000010000";
         s_fl <= "00";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+        
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00000001000";
         s_fl <= "00";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+        
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00000000100";
         s_fl <= "00";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+        
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00000000100";
         s_fl <= "10";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+       
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00000000010";
         s_fl <= "00";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+        
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00000000010";
         s_fl <= "01";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+        
+        wait for 8*CLK_PERIOD;
 
         s_ed <= "00000000001";
-        s_fl <= "01";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
+        s_fl <= "00";
+       
+        wait for 8*CLK_PERIOD;
 
 
 
