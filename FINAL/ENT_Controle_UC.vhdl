@@ -85,7 +85,7 @@ architecture archUC of UC is
   signal s_STA          : std_logic_vector(10 downto 0);
   
 begin
-    
+
   sinal_DECODENZ(12 downto 11)  <= FlagsNZ;
   sinal_DECODENZ(10 downto 0)   <= EnterDecode;
   
@@ -100,17 +100,48 @@ begin
   U_STA     : Mod_UC_STA    port map (sinal_cont, s_STA);
 
   barrControle   <= s_HLT    when sinal_DECODENZ = "0000000000001" else
+                  s_HLT      when sinal_DECODENZ = "0100000000001" else
+                  s_HLT      when sinal_DECODENZ = "1000000000001" else
+
                   s_JMP      when sinal_DECODENZ = "0000000001000" else
+                  s_JMP      when sinal_DECODENZ = "1000000001000" else
+                  s_JMP      when sinal_DECODENZ = "0100000001000" else
+
                   s_JMP      when sinal_DECODENZ = "1000000000100" else
-                  s_JMP      when sinal_DECODENZ = "0100000000010" else
                   s_JMPNZ    when sinal_DECODENZ = "0000000000100" else
+                  s_JMPNZ    when sinal_DECODENZ = "0100000000100" else
+                  
+                  s_JMP      when sinal_DECODENZ = "0100000000010" else
                   s_JMPNZ    when sinal_DECODENZ = "0000000000010" else
+                  s_JMPNZ    when sinal_DECODENZ = "1000000000010" else
+                  
+
                   s_NOP      when sinal_DECODENZ = "0010000000000" else
+                  s_NOP      when sinal_DECODENZ = "0110000000000" else
+                  s_NOP      when sinal_DECODENZ = "1010000000000" else
+
                   s_NOT      when sinal_DECODENZ = "0000000010000" else
+                  s_NOT      when sinal_DECODENZ = "1000000010000" else
+                  s_NOT      when sinal_DECODENZ = "0100000010000" else
+
                   s_STA      when sinal_DECODENZ = "0001000000000" else
+                  s_STA      when sinal_DECODENZ = "1001000000000" else
+                  s_STA      when sinal_DECODENZ = "0101000000000" else
+
                   s_LDA      when sinal_DECODENZ = "0000100000000" else
+                  s_LDA      when sinal_DECODENZ = "0100100000000" else
+                  s_LDA      when sinal_DECODENZ = "1000100000000" else
+
                   s_LDA      when sinal_DECODENZ = "0000010000000" else
+                  s_LDA      when sinal_DECODENZ = "0100010000000" else
+                  s_LDA      when sinal_DECODENZ = "1000010000000" else
+
                   s_LDA      when sinal_DECODENZ = "0000001000000" else
-                  s_LDA      when sinal_DECODENZ = "0000000100000";
+                  s_LDA      when sinal_DECODENZ = "0100001000000" else
+                  s_LDA      when sinal_DECODENZ = "1000001000000" else
+
+                  s_LDA      when sinal_DECODENZ = "0000000100000" else
+                  s_LDA      when sinal_DECODENZ = "1000000100000" else
+                  s_LDA      when sinal_DECODENZ = "0100000100000";
 
 end architecture;
