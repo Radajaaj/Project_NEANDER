@@ -1,6 +1,6 @@
 library ieee ;
     use ieee.std_logic_1164.all ;
-
+ 
 entity Mod_UC_JMPNZ is
   port (
     EnterJMPNZ    : in  std_logic_vector(2 downto 0);

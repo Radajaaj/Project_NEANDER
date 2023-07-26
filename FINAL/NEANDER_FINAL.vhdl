@@ -23,7 +23,7 @@ architecture ArchNeander of NEANDER is
       );
     end component;
 
-------------------------MEMÓRIA-------------------------------------
+------------------------MEMoRIA-------------------------------------
     component modulo_Mem is 
       port(
         end_PC               : in std_logic_vector(7 downto 0);
