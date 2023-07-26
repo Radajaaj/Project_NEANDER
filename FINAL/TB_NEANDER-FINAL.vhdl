@@ -2,7 +2,6 @@ library IEEE;
 use ieee.std_logic_1164.all;
 
 entity TB_NEANDER is 
-    --Entidade vazia
 end entity;
 
 architecture Neanderzin of TB_NEANDER is 
@@ -29,14 +28,8 @@ begin
         wait for CLK_PERIOD;
         
         Sig_Resetar <= '1';
-        wait for CLK_PERIOD;
-        wait for CLK_PERIOD;
-        wait for CLK_PERIOD;
-        wait for CLK_PERIOD;
-        wait for CLK_PERIOD;
-        wait for CLK_PERIOD;
-        wait for CLK_PERIOD;
-        wait for CLK_PERIOD;
+        wait for 8*CLK_PERIOD;
+        
         
         end process;
 
