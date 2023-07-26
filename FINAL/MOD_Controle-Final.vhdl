@@ -57,13 +57,14 @@ architecture arch of ControleAll is
     signal Saida_PC, Saida_RI : std_logic_vector(7 downto 0);
     signal Saida_Decode : std_logic_vector(10 downto 0);
     signal Barramento_instruct : std_logic_vector(10 downto 0);
-    
+     
 begin
     Barramento_Controle <= Barramento_instruct;
-    PC_out <= Saida_PC;
-    u_PC : PC_tudo port map (Barramento_PC, Barramento_instruct(10), Barramento_instruct(5), Clear, Clock , Saida_PC);
-    u_RI : reg8bits port map (Barramento_RI, Clock, '1', Clear, Barramento_instruct(0), Saida_RI);
+    --PC_out <= Saida_PC; PC_out ultimo argumento do u_PC. Talvez seja preciso um elo
+    u_PC  : PC_tudo port map (Barramento_PC, Barramento_instruct(10), Barramento_instruct(5), Clear, Clock, PC_out);
+    u_RI  : reg8bits port map (Barramento_RI, Clock, '1', Clear, Barramento_instruct(0), Saida_RI);
     u_DEC : decodificador port map (Saida_RI, Saida_Decode);
-    u_UC : UC port map (Saida_Decode, Flags_NZ, Clock, Clear, Barramento_Controle);
+    u_UC  : UC port map (Saida_Decode, Flags_NZ, Clock, Clear, Barramento_Controle);
+                                             --talvez deva ser Barramento_instruct? ou o contrario?
 
-end architecture ;
+end architecture ; 

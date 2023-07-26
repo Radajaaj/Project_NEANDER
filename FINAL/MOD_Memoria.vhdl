@@ -2,8 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity modulo_Mem is port
-(
+entity modulo_Mem is 
+port(
     end_PC   : in std_logic_vector(7 downto 0);
     end_Barr : in std_logic_vector(7 downto 0);
     nBarrPC  : in std_logic;
@@ -13,7 +13,7 @@ entity modulo_Mem is port
     reset    : in std_logic;
     clk      : in std_logic;
     interface_barramento : inout std_logic_vector(7 downto 0)
-);
+); 
 end entity;
 
 architecture memoriando of modulo_Mem is

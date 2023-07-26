@@ -3,7 +3,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+ 
 
 entity Mod_UC_NOP is
   port (

@@ -98,7 +98,7 @@ begin
   U_NOP     : Mod_UC_NOP    port map (sinal_cont, s_NOP);
   U_NOT     : Mod_UC_NOT    port map (sinal_cont, s_NOT);
   U_STA     : Mod_UC_STA    port map (sinal_cont, s_STA);
-  
+
   barrControle   <= s_HLT    when sinal_DECODENZ = "0000000000001" else
                   s_JMP      when sinal_DECODENZ = "0000000001000" else
                   s_JMP      when sinal_DECODENZ = "1000000000100" else
