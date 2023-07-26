@@ -27,80 +27,76 @@ architecture arcashrr of teste023 is
     signal s_bC : std_logic_vector(10 downto 0);
 begin
 
-    TESTE: Mod_UC_JMPNZ port map (s_ED, s_Fl, s_clk, s_cl, s_bC);
+    TESTE: UC port map (s_ED, s_Fl, s_clk, s_cl, s_bC);
 
     u_reset : process
     begin
 
-        s_ed <= "100000000000";
+        s_ed <= "10000000000";
         s_fl <= "00";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "010000000000";
+        s_ed <= "01000000000";
         s_fl <= "00";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "001000000000";
+        s_ed <= "00100000000";
         s_fl <= "00";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "000100000000";
+        s_ed <= "00010000000";
         s_fl <= "00";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "000010000000";
+        s_ed <= "00001000000";
         s_fl <= "00";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "000001000000";
+        s_ed <= "00000100000";
         s_fl <= "00";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "000000100000";
+        s_ed <= "00000010000";
         s_fl <= "00";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "000000010000";
+        s_ed <= "00000001000";
         s_fl <= "00";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "000000001000";
+        s_ed <= "00000000100";
         s_fl <= "00";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "000000000100";
-        s_fl <= "00";
-        s_cl <= '1';
-        wait for CLK_PERIOD;
-
-        s_ed <= "000000000100";
+        s_ed <= "00000000100";
         s_fl <= "10";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "000000000010";
+        s_ed <= "00000000010";
         s_fl <= "00";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "000000000010";
+        s_ed <= "00000000010";
         s_fl <= "01";
         s_cl <= '1';
         wait for CLK_PERIOD;
 
-        s_ed <= "000000000001";
-        s_fl <= "00";
+        s_ed <= "00000000001";
+        s_fl <= "01";
         s_cl <= '1';
         wait for CLK_PERIOD;
+
 
 
     end process;
