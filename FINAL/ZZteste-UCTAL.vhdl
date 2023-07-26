@@ -6,8 +6,10 @@ entity teste023 is
 end teste023 ; 
 
 architecture arcashrr of teste023 is
+    constant CLK_PERIOD : time:= 10 ns;
 
-    entity UC is
+
+    component UC is
         port (
           EnterDecode     : in std_logic_vector(10 downto 0);
           FlagsNZ         : in std_logic_vector(1 downto 0);
@@ -15,11 +17,11 @@ architecture arcashrr of teste023 is
           cl              : in std_logic;
           barrControle    : out std_logic_vector(10 downto 0)
         );
-    end entity ; 
+    end component ; 
       
 
     signal s_ED :  std_logic_vector(10 downto 0);
-    signal  s_Fl  :  std_logic_vector(1 downto 0);
+    signal s_Fl  :  std_logic_vector(1 downto 0);
     signal s_clk : std_logic:= '1' ;
     signal s_cl : std_logic;
     signal s_bC : std_logic_vector(10 downto 0);
