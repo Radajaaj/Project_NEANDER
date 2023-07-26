@@ -30,6 +30,11 @@ begin
         
         Sig_Resetar <= '1';
         wait for 8*CLK_PERIOD;
+        wait for 8*CLK_PERIOD;
+        wait for 8*CLK_PERIOD;
+        wait for 8*CLK_PERIOD;
+        wait for 8*CLK_PERIOD;
+        wait for 8*CLK_PERIOD;
         
         
         end process;
