@@ -87,9 +87,9 @@ begin
 
   sinal_DECODENZ(12 downto 11)  <= FlagsNZ;
   sinal_DECODENZ(10 downto 0)   <= EnterDecode;
-  Sai                           <= sinal_cont;
   
-  U_CONT    : contador3bits port map (clk, cl, '1');
+  
+  U_CONT    : contador3bits port map (clk, cl, '1', sinal_cont);
   U_HLT     : Mod_UC_HLT    port map (sinal_cont, s_HLT);
   U_JMP     : Mod_UC_JMP    port map (sinal_cont, s_JMP);
   U_JMPNZ   : Mod_UC_JMPNZ  port map (sinal_cont, s_JMPNZ);
