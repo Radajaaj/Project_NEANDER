@@ -46,4 +46,4 @@ begin
         wait for CLK_PERIOD/2;
     end process;
 
-end architecture Neanderzin;
+end architecture;

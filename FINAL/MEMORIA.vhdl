@@ -17,13 +17,13 @@ end entity;
 
 architecture memoriando of modulo_Mem is
     
-    component mux2x8 is port
-    (
-        Bar : in std_logic_vector(7 downto 0 ) ;
-        PC : in std_logic_vector(7 downto 0 ) ;
+    component mux2x8 is 
+        port(
+        A : in std_logic_vector (7 downto 0);
+        B : in std_logic_vector (7 downto 0);
         sel : in std_logic;
-        S : out std_logic_vector(7 downto 0 )
-    );
+        S : out std_logic_vector (7 downto 0)
+        );
     end component;
 
     component Reg_REM is
