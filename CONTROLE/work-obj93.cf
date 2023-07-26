@@ -1,0 +1,28 @@
+v 4
+file . "Mod_UC_STA.vhdl" "6278583b636e31dcd7f24288d73726eee2123763" "20230725232311.985":
+  entity mod_uc_sta at 1( 0) + 0 on 27;
+  architecture archsta of mod_uc_sta at 11( 196) + 0 on 28;
+file . "Mod_UC_NOT.vhdl" "b43d9a6efffa60b2cf070d268a52881977565e30" "20230725232311.975":
+  entity mod_uc_not at 1( 0) + 0 on 25;
+  architecture archnot of mod_uc_not at 11( 203) + 0 on 26;
+file . "Mod_UC_NOP.vhdl" "a8fa48002c75b2137fb3970277884b3566c53e16" "20230725232311.973":
+  entity mod_uc_nop at 1( 0) + 0 on 23;
+  architecture archnop of mod_uc_nop at 11( 196) + 0 on 24;
+file . "Mod_UC_LDA.vhdl" "e0f1855ac95b1f6f52803b3647630b7d1f211c37" "20230725232311.971":
+  entity mod_uc_lda at 1( 0) + 0 on 21;
+  architecture archlda of mod_uc_lda at 12( 256) + 0 on 22;
+file . "Mod_UC_JMPNZ.vhdl" "2f38a918b56a302b2198ea50fe44edd0192659db" "20230725232311.969":
+  entity mod_uc_jmpnz at 1( 0) + 0 on 19;
+  architecture archjmpnz of mod_uc_jmpnz at 11( 209) + 0 on 20;
+file . "Mod_UC_JMP.vhdl" "0cc7ee91bca79db85b978bc2e1d7c22d9d943650" "20230725232311.966":
+  entity mod_uc_jmp at 1( 0) + 0 on 17;
+  architecture archjmp of mod_uc_jmp at 11( 203) + 0 on 18;
+file . "Mod_UC_HLT.vhdl" "1accef1407a41600cdc9ce44eb53c53d2061f401" "20230725232311.964":
+  entity mod_uc_hlt at 1( 0) + 0 on 15;
+  architecture archhlt of mod_uc_hlt at 11( 203) + 0 on 16;
+file . "MOD_UC_Contador.vhdl" "05207326b46d0bb6ef00c34cc0d4dfc18ad7d1ba" "20230725232311.956":
+  entity contador3bits at 1( 0) + 0 on 13;
+  architecture contagem of contador3bits at 13( 245) + 0 on 14;
+file . "MOD_Controle-Final.vhdl" "6605b0ff355990dc7c1c2ad71ba3b21d7e3e0453" "20230725232311.952":
+  entity controleall at 1( 0) + 0 on 11;
+  architecture arch of controleall at 16( 386) + 0 on 12;

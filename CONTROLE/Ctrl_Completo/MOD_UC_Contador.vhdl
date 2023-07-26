@@ -20,7 +20,7 @@ architecture contagem of contador3bits is
             q, nq  : out std_logic
         );
     end component;
-
+ 
     component ctrl is
         port(
         q : in  std_logic_vector(2 downto 0);
