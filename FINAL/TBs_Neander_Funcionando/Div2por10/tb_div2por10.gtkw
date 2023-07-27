@@ -1,36 +1,37 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Thu Jul 27 05:33:29 2023
+[*] Thu Jul 27 05:56:18 2023
 [*]
-[dumpfile] "D:\Downloads\UNIOESTE\SD\NEANDER\Project_NEANDER\FINAL\tb_divide10por2.ghw"
-[dumpfile_mtime] "Thu Jul 27 05:33:13 2023"
-[dumpfile_size] 35599
-[savefile] "D:\Downloads\UNIOESTE\SD\NEANDER\Project_NEANDER\FINAL\Neander_Funcionando\tb_divisao_10por0.gtkw"
+[dumpfile] "D:\Downloads\UNIOESTE\SD\NEANDER\Project_NEANDER\FINAL\tb_div0por10.ghw"
+[dumpfile_mtime] "Thu Jul 27 05:56:06 2023"
+[dumpfile_size] 47060
+[savefile] "D:\Downloads\UNIOESTE\SD\NEANDER\Project_NEANDER\FINAL\tb_div2por10.gtkw"
 [timestart] 0
 [size] 1366 745
 [pos] -1 -1
-*-28.670845 1226000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-29.246588 1147000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.tb_neander_separado.
+[treeopen] top.tb_neander_separado.u_mem.
+[treeopen] top.tb_neander_separado.u_mem.u_memoria.
+[treeopen] top.tb_neander_separado.u_mem.u_memoria.ram.
 [treeopen] top.tb_neander_separado.u_ula.
 [sst_width] 197
-[signals_width] 181
+[signals_width] 175
 [sst_expanded] 1
 [sst_vpaned_height] 204
 @25
 [color] 7
 #{top.tb_neander_separado.sbarramento[7:0]} top.tb_neander_separado.sbarramento[7] top.tb_neander_separado.sbarramento[6] top.tb_neander_separado.sbarramento[5] top.tb_neander_separado.sbarramento[4] top.tb_neander_separado.sbarramento[3] top.tb_neander_separado.sbarramento[2] top.tb_neander_separado.sbarramento[1] top.tb_neander_separado.sbarramento[0]
 [color] 1
-#{top.tb_neander_separado.u_mem.u_memoria.ram[132][7:0]} top.tb_neander_separado.u_mem.u_memoria.ram[132][7] top.tb_neander_separado.u_mem.u_memoria.ram[132][6] top.tb_neander_separado.u_mem.u_memoria.ram[132][5] top.tb_neander_separado.u_mem.u_memoria.ram[132][4] top.tb_neander_separado.u_mem.u_memoria.ram[132][3] top.tb_neander_separado.u_mem.u_memoria.ram[132][2] top.tb_neander_separado.u_mem.u_memoria.ram[132][1] top.tb_neander_separado.u_mem.u_memoria.ram[132][0]
-[color] 2
 #{top.tb_neander_separado.u_ula.s_ac2ula[7:0]} top.tb_neander_separado.u_ula.s_ac2ula[7] top.tb_neander_separado.u_ula.s_ac2ula[6] top.tb_neander_separado.u_ula.s_ac2ula[5] top.tb_neander_separado.u_ula.s_ac2ula[4] top.tb_neander_separado.u_ula.s_ac2ula[3] top.tb_neander_separado.u_ula.s_ac2ula[2] top.tb_neander_separado.u_ula.s_ac2ula[1] top.tb_neander_separado.u_ula.s_ac2ula[0]
+[color] 2
+#{top.tb_neander_separado.u_mem.u_memoria.ram[132][7:0]} top.tb_neander_separado.u_mem.u_memoria.ram[132][7] top.tb_neander_separado.u_mem.u_memoria.ram[132][6] top.tb_neander_separado.u_mem.u_memoria.ram[132][5] top.tb_neander_separado.u_mem.u_memoria.ram[132][4] top.tb_neander_separado.u_mem.u_memoria.ram[132][3] top.tb_neander_separado.u_mem.u_memoria.ram[132][2] top.tb_neander_separado.u_mem.u_memoria.ram[132][1] top.tb_neander_separado.u_mem.u_memoria.ram[132][0]
 [color] 3
 #{top.tb_neander_separado.u_mem.u_memoria.ram[128][7:0]} top.tb_neander_separado.u_mem.u_memoria.ram[128][7] top.tb_neander_separado.u_mem.u_memoria.ram[128][6] top.tb_neander_separado.u_mem.u_memoria.ram[128][5] top.tb_neander_separado.u_mem.u_memoria.ram[128][4] top.tb_neander_separado.u_mem.u_memoria.ram[128][3] top.tb_neander_separado.u_mem.u_memoria.ram[128][2] top.tb_neander_separado.u_mem.u_memoria.ram[128][1] top.tb_neander_separado.u_mem.u_memoria.ram[128][0]
 [color] 3
 #{top.tb_neander_separado.u_mem.u_memoria.ram[129][7:0]} top.tb_neander_separado.u_mem.u_memoria.ram[129][7] top.tb_neander_separado.u_mem.u_memoria.ram[129][6] top.tb_neander_separado.u_mem.u_memoria.ram[129][5] top.tb_neander_separado.u_mem.u_memoria.ram[129][4] top.tb_neander_separado.u_mem.u_memoria.ram[129][3] top.tb_neander_separado.u_mem.u_memoria.ram[129][2] top.tb_neander_separado.u_mem.u_memoria.ram[129][1] top.tb_neander_separado.u_mem.u_memoria.ram[129][0]
-[color] 4
 #{top.tb_neander_separado.u_mem.u_memoria.ram[130][7:0]} top.tb_neander_separado.u_mem.u_memoria.ram[130][7] top.tb_neander_separado.u_mem.u_memoria.ram[130][6] top.tb_neander_separado.u_mem.u_memoria.ram[130][5] top.tb_neander_separado.u_mem.u_memoria.ram[130][4] top.tb_neander_separado.u_mem.u_memoria.ram[130][3] top.tb_neander_separado.u_mem.u_memoria.ram[130][2] top.tb_neander_separado.u_mem.u_memoria.ram[130][1] top.tb_neander_separado.u_mem.u_memoria.ram[130][0]
-[color] 4
 #{top.tb_neander_separado.u_mem.u_memoria.ram[131][7:0]} top.tb_neander_separado.u_mem.u_memoria.ram[131][7] top.tb_neander_separado.u_mem.u_memoria.ram[131][6] top.tb_neander_separado.u_mem.u_memoria.ram[131][5] top.tb_neander_separado.u_mem.u_memoria.ram[131][4] top.tb_neander_separado.u_mem.u_memoria.ram[131][3] top.tb_neander_separado.u_mem.u_memoria.ram[131][2] top.tb_neander_separado.u_mem.u_memoria.ram[131][1] top.tb_neander_separado.u_mem.u_memoria.ram[131][0]
 [pattern_trace] 1
 [pattern_trace] 0
